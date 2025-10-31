@@ -2,21 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueObject : MonoBehaviour
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Dialogue", order = 1)]
+public class DialogueObject : ScriptableObject
 {
     [TextArea]
-    [SerializeField] string dialogue;
+    [SerializeField] string dialogue = "";
 
     [SerializeField] private float duration = 3;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Dialogue => dialogue;
+
+    public float Duration => duration;
 }
