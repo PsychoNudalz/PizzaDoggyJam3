@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: DialogueTest
   m_EditorClassIdentifier: 
-  dialogue: dkfs
-  duration: 3
+  dialogue: This is a test dia log ue
+  dialogueDuration: 1
+  endDuration: 1
