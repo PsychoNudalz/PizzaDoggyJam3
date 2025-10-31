@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 7317556559304535055}
   - component: {fileID: 3829654946741120721}
   - component: {fileID: 4673598027064923977}
+  - component: {fileID: 596794437148516487}
+  - component: {fileID: 1581665800344905165}
   m_Layer: 0
   m_Name: NPC_Base
   m_TagString: Untagged
@@ -106,6 +108,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 0}
   spriteTransform: {fileID: 0}
+--- !u!114 &596794437148516487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333502475244803853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1901612e0212acd4a91d6cfe8ae7f8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speakerName: Patient
+  dialogueList: []
+  dialogueIndex: 0
+--- !u!114 &1581665800344905165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333502475244803853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a996b451ff46dd488b8fbed3eb593fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteractEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isDebug: 0
+  dialogueController: {fileID: 596794437148516487}
 --- !u!1 &8015061728969498619
 GameObject:
   m_ObjectHideFlags: 0

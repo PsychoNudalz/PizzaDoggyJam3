@@ -18,7 +18,11 @@ public class InteractDialogue : InteractAbstract
 
     public override void OnInteract()
     {
-        base.OnInteract();
+        if (dialogueController)
+        {
+            dialogueController.LoadDialogue();
+        }
 
+        base.OnInteract();
     }
 }

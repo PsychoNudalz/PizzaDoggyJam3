@@ -15,4 +15,20 @@ public class DialogueController : MonoBehaviour
             UIController.LoadDialogue(new DialogueStruct(speakerName, dialogueList[dialogueIndex]));
         }
     }
+
+    public void NextDialogue()
+    {
+        IncreaseIndex();
+        LoadDialogue();
+    }
+
+    public void IncreaseIndex()
+    {
+        dialogueIndex= (dialogueIndex + 1) % dialogueList.Count;
+    }
+
+    public void SetIndex(int index)
+    {
+        dialogueIndex = index;
+    }
 }

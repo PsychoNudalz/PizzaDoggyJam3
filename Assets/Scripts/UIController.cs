@@ -12,6 +12,9 @@ public class UIController : MonoBehaviour
     [SerializeField] Transform dialogueRoot;
 
     [SerializeField] TMP_Text dialogueText;
+    [SerializeField] TMP_Text speakerNameText;
+
+    [SerializeField] bool isDialogue = false;
     [SerializeField] DialogueStruct currentDialogue;
     [SerializeField] List<DialogueStruct> dialogueQueue;
     [SerializeField] List<string> dialogueWords;
@@ -31,6 +34,14 @@ public class UIController : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        if (dialogueRoot)
+        {
+            dialogueRoot.gameObject.SetActive(false);
+        }
+    }
+
     public static void LoadDialogue(DialogueStruct dialogue)
     {
         if (!Instance)
@@ -45,15 +56,21 @@ public class UIController : MonoBehaviour
     public void QueueDialogue(DialogueStruct dialogue)
     {
         dialogueQueue.Add(dialogue);
+        if (!isDialogue)
+        {
+            LoadNextDialogue();
+        }
+        // if (currentDialogue)
     }
 
     void LoadNextDialogue()
     {
+        StopDialogueCoroutine();
+
         if (dialogueQueue.Count > 0)
         {
             currentDialogue = dialogueQueue[0];
             dialogueQueue.RemoveAt(0);
-            StopDialogueCoroutine();
 
             dialogueCoroutine = StartCoroutine(DialogueCoroutine());
         }
@@ -66,28 +83,41 @@ public class UIController : MonoBehaviour
             StopCoroutine(dialogueCoroutine);
             dialogueCoroutine = null;
         }
+
+        isDialogue = false;
+        dialogueRoot.gameObject.SetActive(false);
     }
 
     IEnumerator DialogueCoroutine()
     {
-        dialogueText.text = "";
+        isDialogue = true;
+        dialogueRoot.gameObject.SetActive(true);
+
         DialogueObject currentDialogueDialogue = currentDialogue.dialogue;
+        dialogueText.text = "";
+        speakerNameText.text = currentDialogue.speakerName;
+        Debug.Log("Start Dialogue: " + currentDialogueDialogue.Dialogue);
+
         dialogueWords = new List<string>(currentDialogueDialogue.Dialogue.Split(" "));
         wordInterval = currentDialogueDialogue.DialogueDuration / dialogueWords.Count;
         while (dialogueWords.Count > 0)
         {
-            dialogueText.text = dialogueWords[0];
+            dialogueText.text += dialogueWords[0];
+            if (dialogueWords.Count > 1)
+            {
+                dialogueText.text += " ";
+            }
+
             dialogueWords.RemoveAt(0);
             yield return new WaitForSeconds(wordInterval);
         }
 
         yield return new WaitForSeconds(currentDialogueDialogue.EndDuration);
 
-        StopDialogueCoroutine();
+        LoadNextDialogue();
     }
 
     void UpdateDialogueText()
     {
-
     }
 }

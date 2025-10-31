@@ -10,19 +10,23 @@ public abstract class InteractAbstract : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] UnityEvent OnInteractEvents;
+    [Header("Debug")]
+    [SerializeField] bool isDebug = false;
 
 
 
     public virtual void OnFocus_Enter()
     {
         IsFocus = true;
-        print(gameObject.name + " is focused");
+        if(isDebug)
+            print(gameObject.name + " is focused");
     }
 
     public virtual void OnFocus_Exit()
     {
         IsFocus = false;
-        print(gameObject.name + " exit focuse");
+        if(isDebug)
+            print(gameObject.name + " exit focuse");
     }
 
     public virtual void OnInteract()

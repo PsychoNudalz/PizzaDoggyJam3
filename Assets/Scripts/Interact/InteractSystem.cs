@@ -76,7 +76,7 @@ public class InteractSystem : MonoBehaviour
                 if (interactTarget)
                 {
                     SetInteractTarget(null);
-                    print("Lost interact target");
+                    // print("Lost interact target");
                 }
             }
 
