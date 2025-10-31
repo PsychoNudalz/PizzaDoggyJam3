@@ -361,6 +361,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   raycastTag: 
-  raycastDistance: 2
+  raycastDistance: 5
   raycastInterval: 0.1
   interactTarget: {fileID: 0}
