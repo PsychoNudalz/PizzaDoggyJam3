@@ -16,7 +16,7 @@ TagManager:
   - UI
   - InteractableObject
   - NPC
-  - 
+  - InteractableRaycast
   - 
   - PopUp UI
   - 
