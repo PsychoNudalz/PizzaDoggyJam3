@@ -68,8 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speakerName: 
-  dialogueList:
-  - {fileID: 11400000, guid: 0f5c101ffc480444e8337fd7f19a054e, type: 2}
+  dialogueList: []
   dialogueIndex: 0
 --- !u!114 &7621566840917155064
 MonoBehaviour:

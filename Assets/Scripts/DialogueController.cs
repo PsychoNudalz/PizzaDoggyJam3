@@ -5,14 +5,23 @@ using UnityEngine;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] string speakerName;
-    [SerializeField] List<DialogueObject> dialogueList;
+    [SerializeField] List<DialogueOrder> dialogueList;
     [SerializeField] int dialogueIndex;
 
     public void LoadDialogue()
     {
         if (dialogueList.Count > 0)
         {
-            UIController.LoadDialogue(new DialogueStruct(speakerName, dialogueList[dialogueIndex]));
+            UIController.LoadDialogue(new DialogueStruct(speakerName, dialogueList[dialogueIndex].dialogue));
+            if (dialogueList[dialogueIndex].increaseIndex)
+            {
+                IncreaseIndex();
+            }
+
+            if (dialogueList[dialogueIndex].jumpToIndex >= 0)
+            {
+                SetIndex(dialogueList[dialogueIndex].jumpToIndex);
+            }
         }
     }
 

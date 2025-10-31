@@ -329,6 +329,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d5bdbfcb2a2b3640af23a09ce1640d8,
+        type: 2}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[1].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f5c101ffc480444e8337fd7f19a054e,
+        type: 2}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d5bdbfcb2a2b3640af23a09ce1640d8,
+        type: 2}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[3].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 8211c4d341bbdf046b0a2ddcd1eb1a09,
+        type: 2}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].jumpToIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[1].jumpToIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[2].jumpToIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[3].jumpToIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].increaseIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[1].increaseIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001674017818552368, guid: 65b03f2cdb7a1d548ab562c71df74c47,
+        type: 3}
+      propertyPath: dialogueList.Array.data[2].increaseIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3435352627966156730, guid: 65b03f2cdb7a1d548ab562c71df74c47,
         type: 3}
       propertyPath: m_Name
@@ -1361,6 +1425,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PFI_DialogueTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621566840917155064, guid: 1cc03f43148d98241b90c43ecba579f1,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621566840917155064, guid: 1cc03f43148d98241b90c43ecba579f1,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2413,8 +2487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speakerName: 
-  dialogueList:
-  - {fileID: 11400000, guid: f4f649d9955fb0c41b6247b49e069a55, type: 2}
+  dialogueList: []
   dialogueIndex: 0
 --- !u!1001 &8726075597023582775
 PrefabInstance:
