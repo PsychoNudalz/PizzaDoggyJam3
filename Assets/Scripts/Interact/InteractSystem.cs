@@ -96,4 +96,12 @@ public class InteractSystem : MonoBehaviour
             interactTarget.OnFocus_Enter();
         }
     }
+
+    public void OnInteract()
+    {
+        if (interactTarget)
+        {
+            interactTarget.OnInteract();
+        }
+    }
 }
