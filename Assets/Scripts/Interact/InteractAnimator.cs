@@ -24,8 +24,10 @@ public class InteractAnimator : InteractAbstract
         }
     }
 
-    public override void OnInteract()
+    protected override void InteractLogic()
     {
+        if(isInteracting) return;
+
         if (!isToggle)
         {
             animator?.SetTrigger(animatiorTrigger_Interact);
@@ -44,7 +46,7 @@ public class InteractAnimator : InteractAbstract
             }
         }
 
-        base.OnInteract();
+        base.InteractLogic();
     }
 
     // Start is called before the first frame update

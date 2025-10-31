@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,9 @@ public abstract class InteractAbstract : MonoBehaviour
     [SerializeField] [Tooltip("Does it disables after interacting")]
     protected bool oneOffInteract = false;
 
+    [Space(5)]
+    [SerializeField] bool isAutoTrigger = false;
+
     [Header("Events")]
     [SerializeField] protected UnityEvent OnInteractEvents;
 
@@ -30,12 +34,12 @@ public abstract class InteractAbstract : MonoBehaviour
     [SerializeField]
     protected bool isDebug = false;
 
-
-    public virtual void OnFocus_Enter()
+    public bool CanInteract() => canInteract&&!isInteracting;
+    public virtual bool OnFocus_Enter()
     {
         if (!canInteract||isInteracting)
         {
-            return;
+            return false;
         }
 
         isFocus = true;
@@ -53,6 +57,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
         if (isDebug)
             print(gameObject.name + " is focused");
+        return true;
     }
 
     public virtual void OnFocus_Exit()
@@ -67,7 +72,14 @@ public abstract class InteractAbstract : MonoBehaviour
             print(gameObject.name + " exit focuse");
     }
 
-    public virtual void OnInteract()
+
+    public void OnInteract()
+    {
+        if(isInteracting) return;
+        InteractLogic();
+    }
+
+    protected virtual void InteractLogic()
     {
         OnInteractEvents.Invoke();
         if (oneOffInteract)
@@ -79,6 +91,7 @@ public abstract class InteractAbstract : MonoBehaviour
         {
             StartCoroutine(InteractCooldownCoroutine());
         }
+        OnFocus_Exit();
     }
 
     IEnumerator InteractCooldownCoroutine()
@@ -86,6 +99,33 @@ public abstract class InteractAbstract : MonoBehaviour
         isInteracting = true;
         yield return new WaitForSeconds(interactCooldown);
         isInteracting = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        OnTiggerEnter_Interact();
+    }
+
+    private void OnTiggerEnter_Interact()
+    {
+        if (isAutoTrigger)
+        {
+            InteractLogic();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (isAutoTrigger && !isInteracting && canInteract)
+        {
+            OnTiggerEnter_Interact();
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
     }
 
     public void TestPrintEvent()

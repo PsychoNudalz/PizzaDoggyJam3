@@ -25,13 +25,11 @@ public class InteractSystem : MonoBehaviour
     private void Start()
     {
         if (isRaycast)
-            raycastCoroutine = StartCoroutine(CastInteractRay());
+            SetRaycast(true);
     }
 
     private void SetRaycast(bool value)
     {
-        if (value == isRaycast)
-            return;
 
         isRaycast = value;
 
@@ -57,15 +55,17 @@ public class InteractSystem : MonoBehaviour
         while (isRaycast)
         {
             Ray ray = new Ray(rootComponent.position, rootComponent.forward);
-            Debug.DrawLine(rootComponent.position, rootComponent.position + rootComponent.forward * raycastDistance, Color.red,raycastInterval);
+            // Debug.DrawLine(rootComponent.position, rootComponent.position + rootComponent.forward * raycastDistance, Color.red,raycastInterval);
 
             if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, layerMask))
             {
                 if (string.IsNullOrEmpty(raycastTag) || hit.collider.CompareTag(raycastTag))
                 {
                     InteractAbstract target = hit.collider.GetComponent<InteractAbstract>();
-                    if (target && target != interactTarget)
+                    if (target && target != interactTarget&&target.CanInteract())
                     {
+                        Debug.DrawLine(rootComponent.position, rootComponent.position + rootComponent.forward * raycastDistance, Color.green,raycastInterval);
+
                         SetInteractTarget(target);
                         print("New interact target: " + target.name);
                     }
@@ -73,6 +73,8 @@ public class InteractSystem : MonoBehaviour
             }
             else
             {
+                 Debug.DrawLine(rootComponent.position, rootComponent.position + rootComponent.forward * raycastDistance, Color.red,raycastInterval);
+
                 if (interactTarget)
                 {
                     SetInteractTarget(null);
@@ -84,8 +86,9 @@ public class InteractSystem : MonoBehaviour
         }
     }
 
-    private void SetInteractTarget(InteractAbstract target)
+    private void SetInteractTarget(InteractAbstract target = null)
     {
+        bool hasFocus = false;
         if (interactTarget)
         {
             interactTarget.OnFocus_Exit();
@@ -93,7 +96,12 @@ public class InteractSystem : MonoBehaviour
         interactTarget = target;
         if (interactTarget)
         {
-            interactTarget.OnFocus_Enter();
+            hasFocus = interactTarget.OnFocus_Enter();
+            if (!hasFocus)
+            {
+                SetInteractTarget(null);
+
+            }
         }
     }
 
@@ -102,6 +110,7 @@ public class InteractSystem : MonoBehaviour
         if (interactTarget)
         {
             interactTarget.OnInteract();
+            SetInteractTarget();
         }
     }
 }

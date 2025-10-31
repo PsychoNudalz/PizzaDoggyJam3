@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -786156763905671207}
   - component: {fileID: 8291107801212838296}
   m_Layer: 6
-  m_Name: I_TestCube
+  m_Name: PFI_TestCube
   m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

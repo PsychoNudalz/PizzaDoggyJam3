@@ -16,13 +16,13 @@ public class InteractDialogue : InteractAbstract
         }
     }
 
-    public override void OnInteract()
+    protected override void InteractLogic()
     {
         if (dialogueController)
         {
             dialogueController.LoadDialogue();
         }
 
-        base.OnInteract();
+        base.InteractLogic();
     }
 }

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa6fdd903889bca43bd46b37a01d19f3, type: 2}
+  - {fileID: 2100000, guid: f9bd0c30cf58b474d80109ac95c91774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 75d23b5e0dc4f9e44a4aeb85c44b176f, type: 2}
+  - {fileID: 2100000, guid: 83bbdbb6035578e47801b5aeea5d43be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,8 +261,8 @@ GameObject:
   - component: {fileID: 5196709216996436567}
   - component: {fileID: 5100055410919953423}
   - component: {fileID: 7616662847071113462}
-  m_Layer: 8
-  m_Name: PF_Door
+  m_Layer: 6
+  m_Name: PFI_Door_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   interactCooldown: 1
-  oneOffInteract: 0
+  oneOffInteract: 1
+  isAutoTrigger: 1
   OnInteractEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -308,7 +309,7 @@ MonoBehaviour:
   popUpOffset: {x: 0, y: 1.4, z: 0}
   isDebug: 0
   animator: {fileID: 7616662847071113462}
-  isToggle: 1
+  isToggle: 0
   animatiorTrigger_Interact: Interact
   animatiorTrigger_ToggleOff: InteractOff
 --- !u!65 &5100055410919953423
@@ -326,7 +327,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
