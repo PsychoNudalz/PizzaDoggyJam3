@@ -35,6 +35,11 @@ public abstract class InteractAbstract : MonoBehaviour
     protected bool isDebug = false;
 
     public bool CanInteract() => canInteract&&!isInteracting;
+
+    public void SetInteract(bool b)
+    {
+        canInteract = b;
+    }
     public virtual bool OnFocus_Enter()
     {
         if (!canInteract||isInteracting)

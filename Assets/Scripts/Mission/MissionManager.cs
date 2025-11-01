@@ -17,6 +17,13 @@ public class MissionManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        List<MissionObject> temp =  new List<MissionObject>();
+        foreach (MissionObject missionObject in missionList)
+        {
+            temp.Add(Instantiate(missionObject));
+        }
+        missionList = temp;
     }
 
     void Start()

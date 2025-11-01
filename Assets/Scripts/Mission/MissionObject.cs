@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Mission", menuName = "Missions/Mission Object")]
@@ -33,4 +34,17 @@ public class MissionObject : ScriptableObject
             Debug.LogWarning($"Mission '{missionName}' not assigned yet.");
         }
     }
+
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (string.IsNullOrEmpty(missionName))
+        {
+            string path = AssetDatabase.GetAssetPath(this);
+            missionName = System.IO.Path.GetFileNameWithoutExtension(path);
+            EditorUtility.SetDirty(this);
+        }
+    }
+#endif
 }
