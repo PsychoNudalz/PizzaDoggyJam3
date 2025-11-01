@@ -8,10 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3652297858400555358, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68e4df329bc61a849a057f57636f0fb4,
+        type: 3}
     - target: {fileID: 4333502475244803853, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Name
-      value: NPC_Base
+      value: NPC_P1
       objectReference: {fileID: 0}
     - target: {fileID: 7317556559304535055, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}

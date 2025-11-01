@@ -3158,7 +3158,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  nextSceneName: 
+  nextSceneName: Day 2
 --- !u!1001 &1648577007
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         onStartEvent.Invoke();
+        if (nextSceneName == "")
+        {
+            nextSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        }
     }
 
     public void LoadNextScene()
@@ -39,6 +43,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
