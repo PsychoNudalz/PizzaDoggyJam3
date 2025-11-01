@@ -13,23 +13,6 @@ PrefabInstance:
       propertyPath: speakerName
       value: Patient Bob
       objectReference: {fileID: 0}
-    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
-        type: 3}
-      propertyPath: dialogueList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
-        type: 3}
-      propertyPath: dialogueList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7d5bdbfcb2a2b3640af23a09ce1640d8,
-        type: 2}
-    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
-        type: 3}
-      propertyPath: dialogueList.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8211c4d341bbdf046b0a2ddcd1eb1a09,
-        type: 2}
     - target: {fileID: 4333502475244803853, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Name
@@ -113,12 +96,24 @@ PrefabInstance:
       value: Pot
       objectReference: {fileID: 0}
     - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40152833
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40152833
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.40152833
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.085
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.057
+      value: 2.109
       objectReference: {fileID: 0}
     - target: {fileID: 4175588716897234, guid: fff119c6f25e8da449793a701e6c116a, type: 3}
       propertyPath: m_LocalPosition.z
