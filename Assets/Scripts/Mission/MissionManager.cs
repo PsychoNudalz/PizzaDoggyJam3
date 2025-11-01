@@ -1,13 +1,21 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance { get; private set; }
 
 
+
     [SerializeField] private List<MissionObject> missionList = new List<MissionObject>();
+
+    [Header("End of day")]
+    [SerializeField]
+    MissionObject endOfDayMission;
+    [SerializeField]
+    UnityEvent onEndOfDay;
 
     private void Awake()
     {
@@ -60,18 +68,22 @@ public class MissionManager : MonoBehaviour
         var mission = missionList.Find(m => m.MissionName == name);
         if (mission != null)
         {
-            mission.LoadMission();
-            UIController.LoadMission(mission);
+            LoadMission(mission);
         }
         else Debug.LogWarning($"Mission '{name}' not found.");
+    }
+    void LoadMission(MissionObject mission)
+    {
+
+        mission.LoadMission();
+        UIController.LoadMission(mission);
     }
 
     public void LoadMissionByIndex(int index)
     {
         if (index >= 0 && index < missionList.Count)
         {
-            missionList[index].LoadMission();
-            UIController.LoadMission(missionList[index]);
+            LoadMission(missionList[index]);
 
         }
 
@@ -84,20 +96,42 @@ public class MissionManager : MonoBehaviour
         var mission = missionList.Find(m => m.MissionName == name);
         if (mission != null)
         {
-            mission.CompleteMission();
-            UIController.CompleteMission(mission);
+            CompleteMission(mission);
         }
         else Debug.LogWarning($"Mission '{name}' not found.");
+    }
+    void CompleteMission(MissionObject mission)
+    {
+        mission.CompleteMission();
+        UIController.CompleteMission(mission);
+
+        bool hasAllMissionCleared = true;
+        foreach (MissionObject missionObject in missionList)
+        {
+            if (!missionObject.IsCompleted)
+            {
+                hasAllMissionCleared = false;
+            }
+        }
+
+        if (hasAllMissionCleared)
+        {
+            LoadMission(endOfDayMission);
+            onEndOfDay.Invoke();
+        }
     }
 
     public void CompleteMissionByIndex(int index)
     {
         if (index >= 0 && index < missionList.Count)
         {
-            missionList[index].CompleteMission();
-            UIController.CompleteMission(missionList[index]);
+            CompleteMission(missionList[index]);
         }
         else
             Debug.LogWarning($"Mission index {index} invalid.");
     }
+
+
+
+
 }
