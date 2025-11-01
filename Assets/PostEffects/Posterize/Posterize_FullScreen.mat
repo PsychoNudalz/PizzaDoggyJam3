@@ -43,5 +43,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Level: 32
-    m_Colors: []
+    - _Use4Split: 1
+    m_Colors:
+    - _Level_Split: {r: 20, g: 25, b: 40, a: 20}
   m_BuildTextureStacks: []
