@@ -68,7 +68,7 @@ PrefabInstance:
     - target: {fileID: 2001674017818552368, guid: a73b8374fdcc5b941817c5d6a48da40a,
         type: 3}
       propertyPath: dialogueList.Array.data[0].loadMissionIndex
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2001674017818552368, guid: a73b8374fdcc5b941817c5d6a48da40a,
         type: 3}
@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 7508248499814010129, guid: 1b782dd0ec3d1f4409efd1913492716a,
         type: 3}
       propertyPath: dialogueList.Array.data[0].completeMissionIndex
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7508248499814010129, guid: 1b782dd0ec3d1f4409efd1913492716a,
         type: 3}
