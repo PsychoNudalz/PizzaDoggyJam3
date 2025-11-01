@@ -33,6 +33,11 @@ public class UIController : MonoBehaviour
     [SerializeField] Dictionary<MissionObject,TMP_Text> currentMissionDictionary =  new Dictionary<MissionObject,TMP_Text>();
     [SerializeField] Animator missionAnimator;
 
+    [Space(14)]
+    [Header("Vaccine")]
+    [SerializeField] Transform vaccineRoot;
+    [SerializeField] TMP_Text vaccineCountText;
+
     private void Awake()
     {
         if (Instance)
@@ -53,6 +58,8 @@ public class UIController : MonoBehaviour
         {
             missionDescription.gameObject.SetActive(false);
         }
+
+        vaccineRoot?.gameObject.SetActive(false);
     }
 
 
@@ -169,5 +176,20 @@ public class UIController : MonoBehaviour
         }
 
         Instance.currentMissionDictionary[mission].gameObject.SetActive(false);
+    }
+
+    //VACCINE
+    public static void ShowVaccine(int vaccineCount)
+    {
+        if(!Instance)return;
+        if (vaccineCount > 0)
+        {
+            Instance.vaccineRoot.gameObject.SetActive(true);
+            Instance.vaccineCountText.text =  vaccineCount.ToString();
+        }
+        else
+        {
+            Instance.vaccineRoot.gameObject.SetActive(false);
+        }
     }
 }

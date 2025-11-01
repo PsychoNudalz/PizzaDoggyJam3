@@ -264,7 +264,7 @@ GameObject:
   m_Layer: 8
   m_Name: PFI_Door
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -300,10 +300,21 @@ MonoBehaviour:
   canInteract: 1
   interactCooldown: 1
   oneOffInteract: 0
+  isAutoTrigger: 0
   OnInteractEvents:
     m_PersistentCalls:
       m_Calls: []
+  singleDialogueOrder:
+    dialogue: {fileID: 0}
+    isIncreaseIndex: 0
+    isJumpIndex: 0
+    jumpToIndex: -1
+    isLoadMissionIndex: 0
+    loadMissionIndex: -1
+    isCompleteMissionIndex: 0
+    completeMissionIndex: -1
   showPopUp: 1
+  popUpText: 
   popUpTransform: {fileID: 0}
   popUpOffset: {x: 0, y: 1.4, z: 0}
   isDebug: 0

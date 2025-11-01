@@ -36,6 +36,8 @@ public class MissionObject : ScriptableObject
     }
 
 
+
+
 #if UNITY_EDITOR
     private void OnValidate()
     {
@@ -47,4 +49,30 @@ public class MissionObject : ScriptableObject
         }
     }
 #endif
+
+    // ---------- Equality by Mission Name ----------
+
+    public override bool Equals(object obj)
+    {
+        if (obj is MissionObject other)
+            return missionName == other.missionName;
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return missionName != null ? missionName.GetHashCode() : 0;
+    }
+
+    public static bool operator ==(MissionObject a, MissionObject b)
+    {
+        if (ReferenceEquals(a, b)) return true;
+        if (a is null || b is null) return false;
+        return a.missionName == b.missionName;
+    }
+
+    public static bool operator !=(MissionObject a, MissionObject b)
+    {
+        return !(a == b);
+    }
 }

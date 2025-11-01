@@ -6,7 +6,7 @@ using UnityEngine;
 public class InteractManager : MonoBehaviour
 {
     public static InteractManager Instance;
-    public GameObject interactPopUp;
+    public InteractPopUp interactPopUp;
 
     private static InteractAbstract currentInteractObject;
 
@@ -19,16 +19,15 @@ public class InteractManager : MonoBehaviour
     {
         if (interactPopUp)
         {
-            interactPopUp.SetActive(false);
+            interactPopUp.gameObject.SetActive(false);
         }
     }
 
-    public static void EnablePopUp(Vector3 position, InteractAbstract interactObject)
+    public static void EnablePopUp(Vector3 position, InteractAbstract interactObject, string text="")
     {
         if (Instance == null || Instance.interactPopUp == null) return;
 
-        Instance.interactPopUp.SetActive(true);
-        Instance.interactPopUp.transform.position = position;
+        Instance.interactPopUp.ShowPopUp(position,text);
         currentInteractObject = interactObject;
     }
 
@@ -36,7 +35,7 @@ public class InteractManager : MonoBehaviour
     {
         if (Instance == null || Instance.interactPopUp == null) return;
 
-        Instance.interactPopUp.SetActive(false);
+        Instance.interactPopUp.HidePopUp();
         currentInteractObject = null;
     }
 }

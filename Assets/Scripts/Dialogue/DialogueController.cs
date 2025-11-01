@@ -23,14 +23,30 @@ public class DialogueController : MonoBehaviour
             {
                 SetIndex(dialogueOrder.jumpToIndex);
             }
-            if (dialogueOrder.isLoadMissionIndex)
-            {
-                MissionManager.LoadMission_Index(dialogueOrder.loadMissionIndex);
-            }
-            if (dialogueOrder.isCompleteMissionIndex)
-            {
-                MissionManager.CompleteMission_Index(dialogueOrder.completeMissionIndex);
-            }
+            dialogueOrder.ProcessMissions();
+            // if (dialogueOrder.isLoadMissionIndex)
+            // {
+            //     if (dialogueOrder.loadMission)
+            //     {
+            //         MissionManager.LoadMission_Object(dialogueOrder.loadMission);
+            //     }
+            //     else
+            //     {
+            //         MissionManager.LoadMission_Index(dialogueOrder.loadMissionIndex);
+            //     }
+            // }
+            // if (dialogueOrder.isCompleteMissionIndex)
+            // {
+            //
+            //     if (dialogueOrder.completeMission)
+            //     {
+            //         MissionManager.CompleteMission_Object(dialogueOrder.completeMission);
+            //     }
+            //     else
+            //     {
+            //         MissionManager.CompleteMission_Index(dialogueOrder.completeMissionIndex);
+            //     }
+            // }
         }
     }
 

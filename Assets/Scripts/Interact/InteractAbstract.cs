@@ -22,10 +22,14 @@ public abstract class InteractAbstract : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] protected UnityEvent OnInteractEvents;
+    [Header("One-off Dialogue")]
+    [SerializeField]
+    [Tooltip("Ignore the index next stuff")]
+    DialogueOrder singleDialogueOrder;
 
     [Header("Pop Up")]
     [SerializeField] protected bool showPopUp = true;
-
+    [SerializeField] protected string popUpText = "";
     [SerializeField] protected Transform popUpTransform;
     [SerializeField] protected Vector3 popUpOffset;
 
@@ -34,7 +38,7 @@ public abstract class InteractAbstract : MonoBehaviour
     [SerializeField]
     protected bool isDebug = false;
 
-    public bool CanInteract() => canInteract&&!isInteracting;
+    public bool CanInteract() => canInteract && !isInteracting;
 
     public void SetInteract(bool b)
     {
@@ -42,7 +46,7 @@ public abstract class InteractAbstract : MonoBehaviour
     }
     public virtual bool OnFocus_Enter()
     {
-        if (!canInteract||isInteracting)
+        if (!canInteract || isInteracting)
         {
             return false;
         }
@@ -57,7 +61,7 @@ public abstract class InteractAbstract : MonoBehaviour
             }
 
             Vector3 position = popUpTransform.position + popUpOffset;
-            InteractManager.EnablePopUp(position, this);
+            InteractManager.EnablePopUp(position, this,popUpText);
         }
 
         if (isDebug)
@@ -78,9 +82,9 @@ public abstract class InteractAbstract : MonoBehaviour
     }
 
 
-    public void OnInteract()
+    public virtual void OnInteract()
     {
-        if(isInteracting) return;
+        if (isInteracting) return;
         InteractLogic();
     }
 
@@ -92,9 +96,14 @@ public abstract class InteractAbstract : MonoBehaviour
             canInteract = false;
         }
 
-        if (interactCooldown > 0)
+        if (interactCooldown > 0&&gameObject.activeSelf)
         {
             StartCoroutine(InteractCooldownCoroutine());
+        }
+
+        if (singleDialogueOrder.dialogue)
+        {
+            LoadSingleDialogue();
         }
         OnFocus_Exit();
     }
@@ -136,5 +145,16 @@ public abstract class InteractAbstract : MonoBehaviour
     public void TestPrintEvent()
     {
         print("Interact Print");
+    }
+
+
+    protected virtual void LoadSingleDialogue()
+    {
+        UIController.LoadDialogue(new DialogueStruct("",singleDialogueOrder.dialogue));
+
+        singleDialogueOrder.ProcessMissions();
+
+
+
     }
 }

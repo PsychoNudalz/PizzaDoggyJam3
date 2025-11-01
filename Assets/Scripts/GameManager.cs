@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] UnityEvent onStartEvent;
     [SerializeField] string nextSceneName;
+    [SerializeField] protected GameObject player;
 
 
     public static GameManager Instance;
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerController findObjectOfType = FindObjectOfType<PlayerController>();
+        if (findObjectOfType)
+        {
+            player =  findObjectOfType.gameObject;
+        }
         onStartEvent.Invoke();
         if (nextSceneName == "")
         {
@@ -45,4 +51,10 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    public virtual void OnCompleteMission(MissionManager missionManager, MissionObject mission)
+    {
+
+    }
+
 }

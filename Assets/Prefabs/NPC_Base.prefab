@@ -143,7 +143,17 @@ MonoBehaviour:
   OnInteractEvents:
     m_PersistentCalls:
       m_Calls: []
+  singleDialogueOrder:
+    dialogue: {fileID: 0}
+    isIncreaseIndex: 0
+    isJumpIndex: 0
+    jumpToIndex: -1
+    isLoadMissionIndex: 0
+    loadMissionIndex: -1
+    isCompleteMissionIndex: 0
+    completeMissionIndex: -1
   showPopUp: 1
+  popUpText: Talk
   popUpTransform: {fileID: 0}
   popUpOffset: {x: 0, y: 2, z: 0}
   isDebug: 0
