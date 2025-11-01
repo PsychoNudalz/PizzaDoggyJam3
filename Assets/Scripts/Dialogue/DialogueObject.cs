@@ -15,11 +15,14 @@ public class DialogueObject : ScriptableObject
     [SerializeField] [Tooltip("Time after displaying dialogue")]
     private float endDuration = 1;
 
+
+
     public string Dialogue => dialogue;
 
     public float DialogueDuration => dialogueDuration;
 
     public float EndDuration => endDuration;
+
 
     // public float WordInterval => 0.1f;
 }

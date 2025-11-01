@@ -24,6 +24,15 @@ public class UIController : MonoBehaviour
 
     Coroutine dialogueCoroutine;
 
+
+    [Space(14)]
+    [Header("Mission")]
+    [SerializeField] Transform missionRoot;
+    [SerializeField] TMP_Text[] missionDescriptions;
+    [SerializeField] TMP_Text missionBigText;
+    [SerializeField] Dictionary<MissionObject,TMP_Text> currentMissionDictionary =  new Dictionary<MissionObject,TMP_Text>();
+    [SerializeField] Animator missionAnimator;
+
     private void Awake()
     {
         if (Instance)
@@ -40,8 +49,14 @@ public class UIController : MonoBehaviour
         {
             dialogueRoot.gameObject.SetActive(false);
         }
+        foreach (TMP_Text missionDescription in Instance.missionDescriptions)
+        {
+            missionDescription.gameObject.SetActive(false);
+        }
     }
 
+
+    // DIALOGUE
     public static void LoadDialogue(DialogueStruct dialogue)
     {
         if (!Instance)
@@ -117,7 +132,42 @@ public class UIController : MonoBehaviour
         LoadNextDialogue();
     }
 
-    void UpdateDialogueText()
+
+    // MISSION
+
+    public static void LoadMission(MissionObject mission)
     {
+        if (Instance.currentMissionDictionary.ContainsKey(mission))
+        {
+            Debug.Log("Mission Already loaded: " + mission);
+            return;
+        }
+
+        foreach (TMP_Text missionDescription in Instance.missionDescriptions)
+        {
+            if (!missionDescription.gameObject.activeSelf)
+            {
+                Instance.currentMissionDictionary.Add(mission, missionDescription);
+                Instance.missionBigText.text = mission.Description;
+                missionDescription.text = mission.Description;
+                missionDescription.gameObject.SetActive(true);
+                Instance.missionAnimator.SetTrigger("Mission");
+
+                return;
+            }
+        }
+
+        Debug.LogError("Mission Array full");
+    }
+
+    public static void CompleteMission(MissionObject mission)
+    {
+        if (!Instance.currentMissionDictionary.ContainsKey(mission))
+        {
+            Debug.LogError("mission not in UI: " + mission);
+            return;
+        }
+
+        Instance.currentMissionDictionary[mission].gameObject.SetActive(false);
     }
 }

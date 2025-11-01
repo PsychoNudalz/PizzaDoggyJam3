@@ -12,15 +12,24 @@ public class DialogueController : MonoBehaviour
     {
         if (dialogueList.Count > 0)
         {
-            UIController.LoadDialogue(new DialogueStruct(speakerName, dialogueList[dialogueIndex].dialogue));
-            if (dialogueList[dialogueIndex].increaseIndex)
+            DialogueOrder dialogueOrder = dialogueList[dialogueIndex];
+            UIController.LoadDialogue(new DialogueStruct(speakerName, dialogueOrder.dialogue));
+            if (dialogueOrder.isIncreaseIndex)
             {
                 IncreaseIndex();
             }
 
-            if (dialogueList[dialogueIndex].jumpToIndex >= 0)
+            if (dialogueOrder.isJumpIndex)
             {
-                SetIndex(dialogueList[dialogueIndex].jumpToIndex);
+                SetIndex(dialogueOrder.jumpToIndex);
+            }
+            if (dialogueOrder.isLoadMissionIndex)
+            {
+                MissionManager.LoadMission_Index(dialogueOrder.loadMissionIndex);
+            }
+            if (dialogueOrder.isCompleteMissionIndex)
+            {
+                MissionManager.CompleteMission_Index(dialogueOrder.completeMissionIndex);
             }
         }
     }
@@ -33,7 +42,7 @@ public class DialogueController : MonoBehaviour
 
     public void IncreaseIndex()
     {
-        dialogueIndex= (dialogueIndex + 1) % dialogueList.Count;
+        dialogueIndex = (dialogueIndex + 1) % dialogueList.Count;
     }
 
     public void SetIndex(int index)
