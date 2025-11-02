@@ -7,13 +7,29 @@ public class MissionObject : ScriptableObject
     [SerializeField] private string missionName = "";
     [TextArea]
     [SerializeField] private string description = "";
+    [SerializeField] private string screenFlashText = "";
     [SerializeField] private bool isAssigned = false;
     [SerializeField] private bool isCompleted = false;
+    [SerializeField] private bool isFlash = false;
+    [SerializeField] Color flashColor = Color.white;
 
     public string MissionName => missionName;
     public string Description => description;
     public bool IsAssigned => isAssigned;
     public bool IsCompleted => isCompleted;
+
+    public string ScreenFlashText
+    {
+        get { return screenFlashText; }
+    }
+    public bool IsFlash
+    {
+        get { return isFlash; }
+    }
+    public Color FlashColor
+    {
+        get { return flashColor; }
+    }
 
     public void LoadMission()
     {
@@ -47,6 +63,7 @@ public class MissionObject : ScriptableObject
             missionName = System.IO.Path.GetFileNameWithoutExtension(path);
             EditorUtility.SetDirty(this);
         }
+
     }
 #endif
 

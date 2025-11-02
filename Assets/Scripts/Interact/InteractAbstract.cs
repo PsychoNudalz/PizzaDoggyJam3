@@ -122,7 +122,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     private void OnTiggerEnter_Interact()
     {
-        if (isAutoTrigger)
+        if (isAutoTrigger&& !isInteracting && canInteract)
         {
             InteractLogic();
         }

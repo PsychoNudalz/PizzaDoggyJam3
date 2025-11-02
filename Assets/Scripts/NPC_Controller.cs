@@ -9,6 +9,11 @@ public class NPC_Controller : MonoBehaviour
 {
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Transform spriteTransform;
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    [SerializeField] string IdleAnimation = "Idle";
+    [SerializeField] string DeadAnimation = "Dead";
+    [SerializeField] string MonsterAnimation = "Monster";
     private Camera _camera;
 
 #if UNITY_EDITOR
@@ -50,5 +55,21 @@ public class NPC_Controller : MonoBehaviour
     {
         spriteTransform.LookAt(_camera.transform);
         spriteTransform.rotation = Quaternion.Euler(0, spriteTransform.rotation.eulerAngles.y, 0);
+    }
+
+
+    public void SetDead(bool b)
+    {
+        if (b)
+        {
+            animator?.Play(DeadAnimation);
+        }
+    }
+    public void SetTreated(bool b)
+    {
+        if (b)
+        {
+            animator?.Play(MonsterAnimation);
+        }
     }
 }

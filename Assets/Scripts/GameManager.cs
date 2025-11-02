@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 
+    public static void ResetScene()
+    {
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -160,11 +160,33 @@ public class UIController : MonoBehaviour
         {
             if (!missionDescription.gameObject.activeSelf)
             {
-                Instance.currentMissionDictionary.Add(mission, missionDescription);
-                Instance.missionBigText.text = mission.Description;
-                missionDescription.text = mission.Description;
-                missionDescription.gameObject.SetActive(true);
+
+                if (mission.ScreenFlashText != "")
+                {
+                    Instance.missionBigText.text = mission.ScreenFlashText;
+                }
+                else
+                {
+                    Instance.missionBigText.text = mission.Description;
+                }
+                Instance.missionBigText.color = mission.FlashColor;
+
+                if (!mission.IsFlash)
+                {
+                    missionDescription.text = mission.Description;
+                    missionDescription.gameObject.SetActive(true);
+                    missionDescription.color = mission.FlashColor;
+
+
+                    Instance.currentMissionDictionary.Add(mission, missionDescription);
+                }
+                else
+                {
+
+                }
+
                 Instance.missionAnimator.SetTrigger("Mission");
+
 
                 return;
             }

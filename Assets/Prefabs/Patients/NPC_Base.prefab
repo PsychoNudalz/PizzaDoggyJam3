@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 4673598027064923977}
   - component: {fileID: 596794437148516487}
   - component: {fileID: 1581665800344905165}
+  - component: {fileID: 8987077430411304753}
   m_Layer: 7
   m_Name: NPC_Base
   m_TagString: NPC
@@ -150,14 +151,37 @@ MonoBehaviour:
     jumpToIndex: -1
     isLoadMissionIndex: 0
     loadMissionIndex: -1
+    loadMission: {fileID: 0}
     isCompleteMissionIndex: 0
     completeMissionIndex: -1
+    completeMission: {fileID: 0}
   showPopUp: 1
   popUpText: Talk
   popUpTransform: {fileID: 0}
   popUpOffset: {x: 0, y: 2, z: 0}
   isDebug: 0
   dialogueController: {fileID: 596794437148516487}
+--- !u!95 &8987077430411304753
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333502475244803853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4a416c37846c734eaed2acb39cd90ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8015061728969498619
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +276,7 @@ GameObject:
   - component: {fileID: 9211931285347444977}
   - component: {fileID: 3652297858400555358}
   m_Layer: 7
-  m_Name: Square
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

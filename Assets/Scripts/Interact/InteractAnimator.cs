@@ -8,7 +8,8 @@ using UnityEngine;
 public class InteractAnimator : InteractAbstract
 {
     [Header("Animator")]
-    [SerializeField] Animator animator;
+    [SerializeField]
+    protected Animator animator;
 
     [SerializeField] private bool isToggle = true;
     private bool toggleFlag = false;
