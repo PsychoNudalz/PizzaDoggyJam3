@@ -47,7 +47,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Glossiness: 0.5
-    - _Level: 128
+    - _Level: 32
     - _Levels: 2
     - _Metallic: 0
     - _QueueControl: 0
