@@ -2619,6 +2619,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2114283753834967213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076771613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 244937891321348368, guid: 7aebeb1b5677d4640a85061a1fd2b9d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 784866779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa18df6a8b20b14cb3cc71a66a3d136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1122887047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4873,6 +4885,41 @@ MonoBehaviour:
           m_StringArgument: Mission_Test_2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1076771613}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: DisablePlayerInput
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: Mission_Test_2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1076771613}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Blink
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: Mission_Test_2
+          m_BoolArgument: 0
+        m_CallState: 2
+  singleDialogueOrder:
+    dialogue: {fileID: 0}
+    isIncreaseIndex: 0
+    isJumpIndex: 0
+    jumpToIndex: -1
+    isLoadMissionIndex: 0
+    loadMissionIndex: -1
+    loadMission: {fileID: 0}
+    isCompleteMissionIndex: 0
+    completeMissionIndex: -1
+    completeMission: {fileID: 0}
   showPopUp: 1
   popUpText: 
   popUpTransform: {fileID: 0}
@@ -4899,8 +4946,10 @@ MonoBehaviour:
     jumpToIndex: -1
     isLoadMissionIndex: 0
     loadMissionIndex: -1
+    loadMission: {fileID: 0}
     isCompleteMissionIndex: 0
     completeMissionIndex: -1
+    completeMission: {fileID: 0}
   dialogueIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

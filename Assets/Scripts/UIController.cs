@@ -25,18 +25,24 @@ public class UIController : MonoBehaviour
     Coroutine dialogueCoroutine;
 
 
-    [Space(14)]
+    [Space(10)]
     [Header("Mission")]
     [SerializeField] Transform missionRoot;
     [SerializeField] TMP_Text[] missionDescriptions;
     [SerializeField] TMP_Text missionBigText;
-    [SerializeField] Dictionary<MissionObject,TMP_Text> currentMissionDictionary =  new Dictionary<MissionObject,TMP_Text>();
+    [SerializeField] Dictionary<MissionObject, TMP_Text> currentMissionDictionary = new Dictionary<MissionObject, TMP_Text>();
     [SerializeField] Animator missionAnimator;
 
-    [Space(14)]
+    [Space(10)]
     [Header("Vaccine")]
     [SerializeField] Transform vaccineRoot;
     [SerializeField] TMP_Text vaccineCountText;
+
+
+    [Space(10)]
+    [Header("Blink")]
+    [SerializeField] Transform blinkRoot;
+    [SerializeField] Animator blinkAnimator;
 
     private void Awake()
     {
@@ -181,15 +187,32 @@ public class UIController : MonoBehaviour
     //VACCINE
     public static void ShowVaccine(int vaccineCount)
     {
-        if(!Instance)return;
+        if (!Instance) return;
         if (vaccineCount > 0)
         {
             Instance.vaccineRoot.gameObject.SetActive(true);
-            Instance.vaccineCountText.text =  vaccineCount.ToString();
+            Instance.vaccineCountText.text = vaccineCount.ToString();
         }
         else
         {
             Instance.vaccineRoot.gameObject.SetActive(false);
         }
+    }
+
+    //BLINK
+    public static void Blink(float duration = .5f)
+    {
+        if (!Instance) return;
+
+        Instance.StartCoroutine(Instance.BlinkCoroutine(duration));
+
+    }
+
+    IEnumerator BlinkCoroutine(float duration)
+    {
+        blinkAnimator?.SetBool("Blink", true);
+        yield return new WaitForSeconds(duration);
+        blinkAnimator?.SetBool("Blink", false);
+
     }
 }

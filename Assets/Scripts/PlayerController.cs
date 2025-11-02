@@ -60,4 +60,15 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         LockPlayerInput(false);
     }
+
+    public void Blink(float duration = 0.5f)
+    {
+        UIController.Blink(duration);
+    }
+    public static void Blink_Static(float duration = 0.5f)
+    {
+        UIController.Blink(duration);
+    }
+
+
 }
