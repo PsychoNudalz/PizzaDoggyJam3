@@ -34,7 +34,14 @@ public class MissionObject : ScriptableObject
     public void LoadMission()
     {
         isAssigned = true;
-        isCompleted = false;
+        if (isFlash)
+        {
+            isCompleted = true;
+        }
+        else
+        {
+            isCompleted = false;
+        }
         Debug.Log($"Mission '{missionName}' loaded.");
     }
 
