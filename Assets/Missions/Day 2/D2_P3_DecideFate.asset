@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: D2_P3_DecideFate
   description: Decide to treat or euthanize patient 3
+  screenFlashText: 
   isAssigned: 0
   isCompleted: 0
+  isFlash: 0
+  flashColor: {r: 1, g: 1, b: 1, a: 1}

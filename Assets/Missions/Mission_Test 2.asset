@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionName: Mission_Test_2
   description: Second mission
+  screenFlashText: 
   isAssigned: 0
   isCompleted: 0
+  isFlash: 0
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
