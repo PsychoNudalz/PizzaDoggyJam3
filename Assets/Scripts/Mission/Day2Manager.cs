@@ -74,6 +74,7 @@ public class Day2Manager : GameManager
         UIController.ShowVaccine(numberOfVaccine);
         isPlayerDropSyringe = true;
         onDropSyringe.Invoke();
+        PlayerController.Blink_Static(1);
     }
 
 }

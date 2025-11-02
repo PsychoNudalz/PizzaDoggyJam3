@@ -170,7 +170,7 @@ MonoBehaviour:
     completeMissionIndex: -1
     completeMission: {fileID: 0}
   showPopUp: 1
-  popUpText: 
+  popUpText: Wash
   popUpTransform: {fileID: 0}
   popUpOffset: {x: 0, y: 0, z: 0}
   isDebug: 0
