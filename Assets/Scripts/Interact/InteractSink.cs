@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,12 @@ public class InteractSink : InteractObject
     [Header("Sink")]
     [SerializeField]
     GameManager gameManager;
+    [SerializeField]
+    Animator animator;
+    [SerializeField]
+    string animationName;
+    [SerializeField]
+    CinemachineVirtualCamera  virtualCamera;
 
     void Start()
     {
@@ -16,6 +23,12 @@ public class InteractSink : InteractObject
     protected override void InteractLogic()
     {
         base.InteractLogic();
+        PlayerController.LockPlayerInput(true);
+        virtualCamera.Priority = 40;
+        animator.Play(animationName);
+    }
+    void LoadNextScene()
+    {
         gameManager?.LoadNextScene();
     }
 }
