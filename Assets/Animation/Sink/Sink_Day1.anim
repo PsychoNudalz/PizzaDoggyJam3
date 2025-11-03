@@ -180,15 +180,6 @@ AnimationClip:
       - serializedVersion: 3
         time: 5.4166665
         value: {x: -39.951, y: -183.36, z: 50.752}
-        inSlope: {x: 0, y: -183.77448, z: 163.19084}
-        outSlope: {x: 0, y: -183.77448, z: 163.19084}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 5.4333334
-        value: {x: -54.278, y: -228.952, z: 82.154}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1060,7 +1051,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1.3666667
         value: 0.025
         inSlope: 0
         outSlope: 0
@@ -1069,7 +1060,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7.016667
+        time: 8.233334
         value: 1
         inSlope: 0
         outSlope: 0
@@ -1279,7 +1270,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 8.016666
+    m_StopTime: 8.233334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -2427,15 +2418,6 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 5.4333334
-        value: -54.278
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2514,15 +2496,6 @@ AnimationClip:
       - serializedVersion: 3
         time: 5.4166665
         value: -183.36
-        inSlope: -183.77448
-        outSlope: -183.77448
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 5.4333334
-        value: -228.952
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2607,15 +2580,6 @@ AnimationClip:
       - serializedVersion: 3
         time: 5.4166665
         value: 50.752
-        inSlope: 163.19084
-        outSlope: 163.19084
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 5.4333334
-        value: 82.154
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4624,7 +4588,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1.3666667
         value: 0.025
         inSlope: 0
         outSlope: 0
@@ -4633,7 +4597,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7.016667
+        time: 8.233334
         value: 1
         inSlope: 0
         outSlope: 0
@@ -4802,7 +4766,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Day1_Animation/Eyes/Eye_Parent (1)
+    path: Day1_Animation/Eyes/Eye_Parent (8)
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4814,7 +4778,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Day1_Animation/Eyes/Eye_Parent (1)
+    path: Day1_Animation/Eyes/Eye_Parent (8)
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4826,7 +4790,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Day1_Animation/Eyes/Eye_Parent (1)
+    path: Day1_Animation/Eyes/Eye_Parent (8)
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4946,7 +4910,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Day1_Animation/Eyes/Eye_Parent (8)
+    path: Day1_Animation/Eyes/Eye_Parent (1)
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4958,7 +4922,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Day1_Animation/Eyes/Eye_Parent (8)
+    path: Day1_Animation/Eyes/Eye_Parent (1)
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4970,7 +4934,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Day1_Animation/Eyes/Eye_Parent (8)
+    path: Day1_Animation/Eyes/Eye_Parent (1)
     classID: 4
     script: {fileID: 0}
     flags: 0
