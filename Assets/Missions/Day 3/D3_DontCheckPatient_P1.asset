@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e9e33825c3a434eb836877540bb949, type: 3}
-  m_Name: D3_DontCheckPatient
+  m_Name: D3_DontCheckPatient_P1
   m_EditorClassIdentifier: 
-  missionName: D3_DontCheckPatient
+  missionName: D3_DontCheckPatient_P1
   description: Let them be
   screenFlashText: Don't check the patients
   isAssigned: 0
