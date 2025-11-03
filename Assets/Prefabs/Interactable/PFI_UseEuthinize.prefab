@@ -53,7 +53,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 0.4, z: 0.4}
+  m_Size: {x: 0.4, y: 0.4, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5313159949530150302
 MonoBehaviour:
@@ -81,8 +81,10 @@ MonoBehaviour:
     jumpToIndex: -1
     isLoadMissionIndex: 0
     loadMissionIndex: -1
+    loadMission: {fileID: 0}
     isCompleteMissionIndex: 0
     completeMissionIndex: -1
+    completeMission: {fileID: 0}
   showPopUp: 1
   popUpText: Euthinize
   popUpTransform: {fileID: 0}

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] UnityEvent onStartEvent;
     [SerializeField] string nextSceneName;
     [SerializeField] protected GameObject player;
+    protected string TreatedPPrefName = "Treated_P";
 
 
     public static GameManager Instance;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
         PlayerController findObjectOfType = FindObjectOfType<PlayerController>();
         if (findObjectOfType)
         {
-            player =  findObjectOfType.gameObject;
+            player = findObjectOfType.gameObject;
         }
         onStartEvent.Invoke();
         if (nextSceneName == "")
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadNextScene()
+    public virtual void LoadNextScene()
     {
         if (nextSceneName == "")
         {

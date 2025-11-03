@@ -22,7 +22,7 @@ public class PatientKit : MonoBehaviour
     [SerializeField]
     List<Sprite> treatedSprites;
 
-    public void IsDead(bool isDead)
+    public void SetDead(bool isDead)
     {
         root_Dead.SetActive(isDead);
         root_Treated.SetActive(!isDead);

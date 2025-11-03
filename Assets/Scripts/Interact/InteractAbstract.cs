@@ -84,7 +84,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     public virtual void OnInteract()
     {
-        if (isInteracting) return;
+        if (isInteracting||isAutoTrigger) return;
         InteractLogic();
     }
 

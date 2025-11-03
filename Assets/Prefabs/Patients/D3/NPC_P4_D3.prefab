@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 467343170954308986, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 467343170954308986, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 2001674017818552368, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
       propertyPath: dialogueList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2001674017818552368, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
@@ -180,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 3435352627966156730, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
       propertyPath: m_Name
-      value: NPC_P4_D2
+      value: NPC_P4_D3
       objectReference: {fileID: 0}
     - target: {fileID: 8503443033293038776, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
