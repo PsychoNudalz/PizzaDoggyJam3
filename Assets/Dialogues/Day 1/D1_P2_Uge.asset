@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D1_P2_Uge
   m_EditorClassIdentifier: 
-  dialogue: huhh, urghh, urgeee
-  dialogueDuration: 2
-  endDuration: 1
+  dialogue: huhh, urghh, urgeee, oue, gah, huh...ho, ho?
+  dialogueDuration: 6
+  endDuration: 4
