@@ -51,6 +51,10 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
+		[Header("Sounds")]
+		[SerializeField]
+		SoundAbstract footstepSound;
+
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -192,6 +196,12 @@ namespace StarterAssets
 			{
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+
+				footstepSound.Play();
+			}
+			else
+			{
+				footstepSound.Stop();
 			}
 
 			// move the player

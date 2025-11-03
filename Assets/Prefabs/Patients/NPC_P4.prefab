@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299924095937214222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2382569144360698896, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -74,6 +79,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 84d26a5b219b2f34facf861179a9fd5f, type: 3}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7526248772246f242b8684278d4546c5, type: 3}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a75f2167467b1c742aae57aca0a00036, type: 3}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 325015f81831fa14588fa94f6ce19993, type: 3}
+    - target: {fileID: 8310331277849373222, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cc2cb48cc025cf4b90c1ca166cd3106, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -8,6 +8,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] List<DialogueOrder> dialogueList;
     [SerializeField] int dialogueIndex;
 
+    [SerializeField] List<SoundAbstract> soundList;
+    [SerializeField]  int soundIndex = 0;
+
     public void LoadDialogue()
     {
         if (dialogueList.Count > 0)
@@ -23,30 +26,15 @@ public class DialogueController : MonoBehaviour
             {
                 SetIndex(dialogueOrder.jumpToIndex);
             }
+
+            if (soundList.Count > soundIndex)
+            {
+                soundList[soundIndex].PlayF();
+            }
+
+
             dialogueOrder.ProcessMissions();
-            // if (dialogueOrder.isLoadMissionIndex)
-            // {
-            //     if (dialogueOrder.loadMission)
-            //     {
-            //         MissionManager.LoadMission_Object(dialogueOrder.loadMission);
-            //     }
-            //     else
-            //     {
-            //         MissionManager.LoadMission_Index(dialogueOrder.loadMissionIndex);
-            //     }
-            // }
-            // if (dialogueOrder.isCompleteMissionIndex)
-            // {
-            //
-            //     if (dialogueOrder.completeMission)
-            //     {
-            //         MissionManager.CompleteMission_Object(dialogueOrder.completeMission);
-            //     }
-            //     else
-            //     {
-            //         MissionManager.CompleteMission_Index(dialogueOrder.completeMissionIndex);
-            //     }
-            // }
+
         }
     }
 
