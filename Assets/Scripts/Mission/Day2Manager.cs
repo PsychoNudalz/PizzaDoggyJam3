@@ -51,6 +51,7 @@ public class Day2Manager : GameManager
     {
         numberOfVaccine--;
         UIController.ShowVaccine(numberOfVaccine);
+        patientSaved.Add(patientID);
         if (numberOfVaccine == 0)
         {
             foreach (InteractUseVaccine interactObject in vaccinePoints)
@@ -75,6 +76,25 @@ public class Day2Manager : GameManager
         isPlayerDropSyringe = true;
         onDropSyringe.Invoke();
         PlayerController.Blink_Static(1);
+    }
+
+    public override void LoadNextScene()
+    {
+        PlayerPrefs.DeleteAll();
+        for (int i = 1; i<=3; i++)
+        {
+            if (patientSaved.Contains(i))
+            {
+                PlayerPrefs.SetInt(TreatedPPrefName+i.ToString(),1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(TreatedPPrefName+i.ToString(),0);
+
+            }
+        }
+
+        base.LoadNextScene();
     }
 
 }

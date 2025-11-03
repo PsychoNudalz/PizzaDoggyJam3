@@ -537,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 1976170409551032828, guid: 2bd2bc2107e29334598f3839467ec56c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.880001
+      value: -18.84
       objectReference: {fileID: 0}
     - target: {fileID: 1976170409551032828, guid: 2bd2bc2107e29334598f3839467ec56c,
         type: 3}
@@ -578,11 +578,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PFI_Vaccine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5313159949530150302, guid: 2bd2bc2107e29334598f3839467ec56c,
-        type: 3}
-      propertyPath: isAutoTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313159949530150302, guid: 2bd2bc2107e29334598f3839467ec56c,
         type: 3}
@@ -2955,7 +2950,7 @@ PrefabInstance:
     - target: {fileID: 7301351529175068225, guid: 8234cbfe8dc5d0542845ae95bac1723e,
         type: 3}
       propertyPath: m_Name
-      value: PFI_Door
+      value: PFI_Door_Office
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
