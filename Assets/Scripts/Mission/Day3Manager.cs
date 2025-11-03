@@ -16,6 +16,8 @@ public class Day3Manager : GameManager
     Patient4ChaseController patient4ChaseController;
     [SerializeField]
     bool startChasing = false;
+    [SerializeField]
+    MissionObject useSyringeMission;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +39,19 @@ public class Day3Manager : GameManager
 
     }
 
-    public void StartChase()
+    public void NotifyStartChase()
     {
         startChasing = true;
-        patient4ChaseController.StartChase();
     }
+
+    public override void OnCompleteMission(MissionManager missionManager, MissionObject mission)
+    {
+        base.OnCompleteMission(missionManager, mission);
+        if (mission.Equals(useSyringeMission))
+        {
+            patient4ChaseController.EnableKillZone();
+        }
+    }
+
+
 }

@@ -8,7 +8,7 @@ public class InteractManager : MonoBehaviour
     public static InteractManager Instance;
     public InteractPopUp interactPopUp;
 
-    private static InteractAbstract currentInteractObject;
+    private InteractAbstract currentInteractObject;
 
     void Awake()
     {
@@ -23,12 +23,20 @@ public class InteractManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (currentInteractObject)
+        {
+            interactPopUp.transform.position = currentInteractObject.PopUpPosition();
+        }
+    }
+
     public static void EnablePopUp(Vector3 position, InteractAbstract interactObject, string text="")
     {
         if (Instance == null || Instance.interactPopUp == null) return;
 
         Instance.interactPopUp.ShowPopUp(position,text);
-        currentInteractObject = interactObject;
+        Instance.currentInteractObject = interactObject;
     }
 
     public static void DisablePopUp()
@@ -36,7 +44,7 @@ public class InteractManager : MonoBehaviour
         if (Instance == null || Instance.interactPopUp == null) return;
 
         Instance.interactPopUp.HidePopUp();
-        currentInteractObject = null;
+        Instance.currentInteractObject = null;
     }
 }
 

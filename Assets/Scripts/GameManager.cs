@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] UnityEvent onStartEvent;
     [SerializeField] string nextSceneName;
+    [SerializeField] UnityEvent onEndEvent;
+    [SerializeField] float delay;
+    bool loadingNextScene = false;
     [SerializeField] protected GameObject player;
     protected string TreatedPPrefName = "Treated_P";
 
@@ -39,11 +42,19 @@ public class GameManager : MonoBehaviour
 
     public virtual void LoadNextScene()
     {
+        if (loadingNextScene) return;
+        loadingNextScene = true;
+        onEndEvent.Invoke();
         if (nextSceneName == "")
         {
             Debug.LogError("Next scene name is empty");
             return;
         }
+        StartCoroutine(DelayLoadScene());
+    }
+    IEnumerator DelayLoadScene()
+    {
+        yield return new WaitForSeconds(delay);
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 

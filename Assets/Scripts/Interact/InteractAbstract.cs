@@ -40,6 +40,12 @@ public abstract class InteractAbstract : MonoBehaviour
 
     public bool CanInteract() => canInteract && !isInteracting;
 
+    public  Vector3 PopUpPosition()
+    {
+        return popUpTransform.position + popUpOffset;
+    }
+
+
     public void SetInteract(bool b)
     {
         canInteract = b;
@@ -60,8 +66,7 @@ public abstract class InteractAbstract : MonoBehaviour
                 popUpTransform = transform;
             }
 
-            Vector3 position = popUpTransform.position + popUpOffset;
-            InteractManager.EnablePopUp(position, this,popUpText);
+            InteractManager.EnablePopUp(PopUpPosition(), this, popUpText);
         }
 
         if (isDebug)
@@ -84,7 +89,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     public virtual void OnInteract()
     {
-        if (isInteracting||isAutoTrigger) return;
+        if (isInteracting || isAutoTrigger) return;
         InteractLogic();
     }
 
@@ -96,9 +101,12 @@ public abstract class InteractAbstract : MonoBehaviour
             canInteract = false;
         }
 
-        if (interactCooldown > 0&&gameObject.activeSelf)
+        if (interactCooldown > 0 && gameObject.activeSelf)
         {
-            StartCoroutine(InteractCooldownCoroutine());
+            if (gameObject.activeSelf)
+            {
+                StartCoroutine(InteractCooldownCoroutine());
+            }
         }
 
         if (singleDialogueOrder.dialogue)
@@ -110,9 +118,12 @@ public abstract class InteractAbstract : MonoBehaviour
 
     IEnumerator InteractCooldownCoroutine()
     {
-        isInteracting = true;
-        yield return new WaitForSeconds(interactCooldown);
-        isInteracting = false;
+        if (gameObject.activeSelf)
+        {
+            isInteracting = true;
+            yield return new WaitForSeconds(interactCooldown);
+            isInteracting = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -122,7 +133,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     private void OnTiggerEnter_Interact()
     {
-        if (isAutoTrigger&& !isInteracting && canInteract)
+        if (isAutoTrigger && !isInteracting && canInteract)
         {
             InteractLogic();
         }
@@ -150,7 +161,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     protected virtual void LoadSingleDialogue()
     {
-        UIController.LoadDialogue(new DialogueStruct("",singleDialogueOrder.dialogue));
+        UIController.LoadDialogue(new DialogueStruct("", singleDialogueOrder.dialogue));
 
         singleDialogueOrder.ProcessMissions();
 
