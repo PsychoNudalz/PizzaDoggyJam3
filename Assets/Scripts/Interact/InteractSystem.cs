@@ -16,6 +16,12 @@ public class InteractSystem : MonoBehaviour
     [Header("Focus")]
     [SerializeField] private InteractAbstract interactTarget;
 
+    public bool IsRaycast
+    {
+        get { return isRaycast; }
+        set { isRaycast = value; }
+    }
+
     private void Awake()
     {
         if (!rootComponent)
@@ -28,7 +34,7 @@ public class InteractSystem : MonoBehaviour
             SetRaycast(true);
     }
 
-    private void SetRaycast(bool value)
+    public void SetRaycast(bool value)
     {
 
         isRaycast = value;

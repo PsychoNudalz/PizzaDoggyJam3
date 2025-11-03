@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,13 +45,18 @@ public class UIController : MonoBehaviour
     [SerializeField] Transform blinkRoot;
     [SerializeField] Animator blinkAnimator;
 
+    [Space(10)]
+    [Header("Inspecting")]
+    [SerializeField] Transform inspectingRoot;
+    Dictionary<ItemEnum, UIInspectItem> inspectItems;
+
     private void Awake()
     {
         if (Instance)
         {
             Destroy(Instance.gameObject);
         }
-
+        InitialiseItems();
         Instance = this;
     }
 
@@ -66,6 +72,8 @@ public class UIController : MonoBehaviour
         }
 
         vaccineRoot?.gameObject.SetActive(false);
+        inspectingRoot?.gameObject.SetActive(false);
+
     }
 
 
@@ -236,5 +244,57 @@ public class UIController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         blinkAnimator?.SetBool("Blink", false);
 
+    }
+
+    //Inspect
+
+    void InitialiseItems()
+    {
+        UIInspectItem[] itemsFound = GetComponentsInChildren<UIInspectItem>(true);
+        inspectItems = new Dictionary<ItemEnum, UIInspectItem>();
+        foreach (UIInspectItem item in itemsFound)
+        {
+            inspectItems.Add(item.ItemEnum, item);
+            item.gameObject.SetActive(false);
+        }
+    }
+
+    public void InspectItem(ItemEnum itemEnum)
+    {
+        StartCoroutine(InspectItem_Delay(itemEnum));
+    }
+    public static void InspectItem_Static(ItemEnum itemEnum)
+    {
+        Instance.InspectItem(itemEnum);
+
+    }
+
+    IEnumerator InspectItem_Delay(ItemEnum itemEnum)
+    {
+        yield return new WaitForFixedUpdate();
+        Debug.Log("Number of items found: " + inspectItems.Count);
+        if (inspectItems.ContainsKey(itemEnum))
+        {
+            inspectingRoot.gameObject.SetActive(true);
+            inspectItems[itemEnum].gameObject.SetActive(true);
+            PlayerController.LockPlayerInput(true);
+        }
+    }
+
+    public void OnInspectOff()
+    {
+        Debug.Log("Inspect Off");
+        foreach (UIInspectItem inspectItemsValue in inspectItems.Values)
+        {
+            inspectItemsValue.gameObject.SetActive(false);
+        }
+        inspectingRoot.gameObject.SetActive(false);
+        PlayerController.LockPlayerInput(false);
+    }
+
+
+    public static void OnInspectOff_Static()
+    {
+        Instance.OnInspectOff();
     }
 }

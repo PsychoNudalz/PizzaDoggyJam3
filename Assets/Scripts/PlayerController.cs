@@ -1,3 +1,4 @@
+using StarterAssets;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     PlayerInput playerInput;
+    [SerializeField]
+    FirstPersonController  firstPersonController;
+    [SerializeField]
+    InteractSystem interactSystem;
     bool inputLock = false;
 
 
@@ -15,6 +20,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
+        firstPersonController = GetComponent<FirstPersonController>();
+        interactSystem = GetComponent<InteractSystem>();
 
         if (Instance)
         {
@@ -38,7 +45,8 @@ public class PlayerController : MonoBehaviour
     public static void LockPlayerInput(bool lockInput)
     {
         Instance.inputLock = lockInput;
-        Instance.playerInput.enabled = !lockInput;
+        Instance.firstPersonController.enabled = !lockInput;
+        Instance.interactSystem.SetRaycast(!lockInput);
     }
 
     public static void DisablePlayerInput_Static(float duration)
@@ -68,6 +76,11 @@ public class PlayerController : MonoBehaviour
     public static void Blink_Static(float duration = 0.5f)
     {
         UIController.Blink(duration);
+    }
+
+    public void OnInspectOff()
+    {
+        UIController.OnInspectOff_Static();
     }
 
 
