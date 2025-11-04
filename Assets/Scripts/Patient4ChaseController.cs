@@ -20,6 +20,8 @@ public class Patient4ChaseController : MonoBehaviour
     ChaseState chaseState = ChaseState.idle;
     [SerializeField]
     Animator patient4Animator;
+    [SerializeField]
+    SoundAbstract chaseSound;
     [Header("From Room")]
     [SerializeField]
     UnityEvent onChase_FromRoom;
@@ -78,6 +80,7 @@ public class Patient4ChaseController : MonoBehaviour
     {
         Chase_FromRoom();
         day3Manager.NotifyStartChase();
+        chaseSound.PlayF();
     }
 
     public void Chase_FromRoom()
@@ -118,5 +121,7 @@ public class Patient4ChaseController : MonoBehaviour
         MissionManager.CompleteMission_Object(chaseMission);
         MissionManager.CompleteMission_Object(findSyringeMission);
         PlayerController.Blink_Static();
+        chaseSound.Stop();
+
     }
 }
