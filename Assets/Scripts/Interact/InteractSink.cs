@@ -12,13 +12,30 @@ public class InteractSink : InteractObject
     [SerializeField]
     Animator animator;
     [SerializeField]
+    List<SoundAbstract> animationSounds;
+    [SerializeField]
     string animationName;
     [SerializeField]
     CinemachineVirtualCamera  virtualCamera;
+    [SerializeField]
+    MeshRenderer mirrorRenderer;
+    [SerializeField]
+    Material m_mirrorOriginal;
+    // [SerializeField]
+    // bool useReflected = false;
+    [SerializeField]
+    Material m_mirrorReflected;
+    [SerializeField]
+    Camera mirrorCamera;
 
     void Start()
     {
         gameManager = GameManager.Instance;
+        if (m_mirrorOriginal)
+        {
+            mirrorRenderer.material = (m_mirrorOriginal);
+        }
+        mirrorCamera?.gameObject.SetActive(false);
     }
     protected override void InteractLogic()
     {
@@ -30,5 +47,20 @@ public class InteractSink : InteractObject
     void LoadNextScene()
     {
         gameManager?.LoadNextScene();
+    }
+
+    public void EnableMirror()
+    {
+        mirrorCamera.gameObject.SetActive(true);
+        mirrorCamera.enabled = true;
+        mirrorRenderer.material = m_mirrorReflected;
+    }
+
+    public void PlaySound(int i)
+    {
+        if (animationSounds.Count > i)
+        {
+            animationSounds[i].Play();
+        }
     }
 }

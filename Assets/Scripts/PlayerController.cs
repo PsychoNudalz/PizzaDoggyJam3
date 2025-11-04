@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
         Instance.inputLock = lockInput;
         Instance.firstPersonController.enabled = !lockInput;
         Instance.interactSystem.SetRaycast(!lockInput);
+
     }
 
     public static void DisablePlayerInput_Static(float duration)

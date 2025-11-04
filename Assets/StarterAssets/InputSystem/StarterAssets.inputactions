@@ -282,17 +282,6 @@
                     "action": "InspectOff",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "28b8b0a1-09ed-47ef-964c-540509cc39ac",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "InspectOff",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
