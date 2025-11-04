@@ -308,7 +308,7 @@ public class UIController : MonoBehaviour
     // Hallucination
     public static void SetHallucination(float strength = 0)
     {
-        if (strength > 0)
+        if (strength > 0.1f)
         {
             Instance.hallucinationRoot.gameObject.SetActive(true);
             var color = Instance.hallucinationImage.color;
@@ -318,6 +318,9 @@ public class UIController : MonoBehaviour
         else
         {
             Instance.hallucinationRoot.gameObject.SetActive(false);
+            var color = Instance.hallucinationImage.color;
+            color.a = 0;
+            Instance.hallucinationImage.color = color;
         }
 
     }

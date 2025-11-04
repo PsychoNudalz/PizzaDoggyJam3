@@ -27,6 +27,8 @@ public class Patient4ChaseController : MonoBehaviour
     GameObject EuthanizeSyringe;
     [SerializeField]
     MissionObject chaseMission;
+    [SerializeField]
+    SoundAbstract sfx_Giggle;
     [Header("From Office")]
     [SerializeField]
     UnityEvent onChase_FromOffice;
@@ -40,6 +42,8 @@ public class Patient4ChaseController : MonoBehaviour
 
     Day3Manager day3Manager;
 
+    Transform playerTransform;
+
 
     void Awake()
     {
@@ -49,13 +53,24 @@ public class Patient4ChaseController : MonoBehaviour
     void Start()
     {
         patient4EuthanizeZone.SetActive(false);
-
+        playerTransform = PlayerController.Instance.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (chaseState == ChaseState.chasing)
+        {
+            if (Vector3.Dot(patient4Chaser.transform.right, (playerTransform.position - patient4EuthanizeZone.transform.position).normalized) > 0)
+            {
 
+                patient4Animator.SetBool("RunRight", true);
+            }
+            else
+            {
+                patient4Animator.SetBool("RunRight", false);
+            }
+        }
     }
 
 
@@ -72,7 +87,13 @@ public class Patient4ChaseController : MonoBehaviour
 
         patient4Animator.Play("Chase_Room");
         onChase_FromRoom.Invoke();
-    }public void Chase_FromOffice()
+    }
+
+    public void PlayGiggle()
+    {
+        sfx_Giggle.PlayF();
+    }
+    public void Chase_FromOffice()
     {
         chaseState = ChaseState.chasing_back;
         MissionManager.LoadMission_Object(findSyringeMission);
@@ -93,6 +114,7 @@ public class Patient4ChaseController : MonoBehaviour
         chaseState = ChaseState.dead;
         patient4Chaser.SetActive(false);
         deadPatient4.SetActive(true);
+        patient4Animator.enabled = false;
         MissionManager.CompleteMission_Object(chaseMission);
         MissionManager.CompleteMission_Object(findSyringeMission);
     }

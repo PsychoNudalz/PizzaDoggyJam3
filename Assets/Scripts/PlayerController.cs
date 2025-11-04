@@ -99,9 +99,9 @@ public class PlayerController : MonoBehaviour
     IEnumerator TeleportRoutine(Vector3 position)
     {
         firstPersonController.enabled = false;
-        Blink();
+        Blink(1);
 
-        yield return new WaitForFixedUpdate();
+        yield return new WaitForSeconds(0.3f);
         transform.position = position;
 
         yield return new WaitForFixedUpdate();

@@ -52,7 +52,15 @@ public class HallucinationHallway : MonoBehaviour
     }
     public void TeleportToToilet()
     {
-        UIController.SetHallucination(0);
+        hasStarted = false;
         PlayerController.TeleportPlayer_Static(toiletTP.position);
+        StartCoroutine(DelayEndHallucination(0.5f));
+    }
+
+    IEnumerator DelayEndHallucination(float time)
+    {
+        yield return new WaitForSeconds(time);
+        UIController.SetHallucination(0);
+
     }
 }
