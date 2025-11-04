@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogue: Several patients admitted for routine care have shown symptoms within
     hours.
   dialogueDuration: 1.5
-  endDuration: 3
+  endDuration: 1

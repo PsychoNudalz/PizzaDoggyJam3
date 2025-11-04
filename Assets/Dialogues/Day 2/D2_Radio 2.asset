@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: Authorities have initiated a full quarantine protocol.
   dialogueDuration: 1
-  endDuration: 3
+  endDuration: 1

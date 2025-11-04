@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D3_CheckPatient
   m_EditorClassIdentifier: 
-  dialogue: Where are they?
+  dialogue: 
   dialogueDuration: 0.5
   endDuration: 1

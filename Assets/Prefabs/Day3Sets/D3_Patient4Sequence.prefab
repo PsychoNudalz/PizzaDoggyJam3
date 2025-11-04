@@ -110,6 +110,7 @@ MonoBehaviour:
   singleDialogueOrder:
     dialogue: {fileID: 0}
     isIncreaseIndex: 0
+    isLoadNextDialogue: 0
     isJumpIndex: 0
     jumpToIndex: -1
     isLoadMissionIndex: 0
@@ -1390,6 +1391,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFI_EuthanizeSyringe_D3
       objectReference: {fileID: 0}
+    - target: {fileID: 4770585007655295171, guid: 8fd87d66b1346c54b96cb4220a3bfd7a,
+        type: 3}
+      propertyPath: singleDialogueOrder.loadMission
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c66690b52250814280b9ed398338764,
+        type: 2}
+    - target: {fileID: 4770585007655295171, guid: 8fd87d66b1346c54b96cb4220a3bfd7a,
+        type: 3}
+      propertyPath: singleDialogueOrder.completeMission
+      value: 
+      objectReference: {fileID: 11400000, guid: 18087c981fc7dcc48afc32d05418bba9,
+        type: 2}
     - target: {fileID: 4770585007655295171, guid: 8fd87d66b1346c54b96cb4220a3bfd7a,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode

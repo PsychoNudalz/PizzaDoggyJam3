@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D3_OpenTheDoor
   m_EditorClassIdentifier: 
-  dialogue: The vaccine should have worked. I need to check on them.  They should
-    be better now.  The parasite should be out of their system for them.
-  dialogueDuration: 2
+  dialogue: The vaccine should have worked. CHECK ON THE PATIENT!
+  dialogueDuration: 0.5
   endDuration: 2

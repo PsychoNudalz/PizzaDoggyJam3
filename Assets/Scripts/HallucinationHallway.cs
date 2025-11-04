@@ -64,6 +64,6 @@ public class HallucinationHallway : MonoBehaviour
         yield return new WaitForSeconds(time);
         UIController.SetHallucination(0);
 
-        // radioDialogue?.LoadDialogue();
+        radioDialogue?.LoadDialogue();
     }
 }
