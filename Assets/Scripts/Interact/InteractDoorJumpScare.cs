@@ -17,6 +17,8 @@ public class InteractDoorJumpScare : InteractAnimator
     }
 
 
+
+
     IEnumerator JumpScare()
     {
         virtualCamera.Priority = 30;
