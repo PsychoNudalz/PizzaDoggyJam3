@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: Vaccines
   m_EditorClassIdentifier: 
-  dialogue: I only have a small amount of vaccines, I can't treat them all.
-  dialogueDuration: 1
+  dialogue: Only 2 vaccines were created
+  dialogueDuration: 0.5
   endDuration: 2

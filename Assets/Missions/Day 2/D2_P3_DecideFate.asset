@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D2_P3_DecideFate
   m_EditorClassIdentifier: 
   missionName: D2_P3_DecideFate
-  description: Decide to treat or euthanize patient 3
+  description: Decide to treat or euthanize patient
   screenFlashText: 
   isAssigned: 0
   isCompleted: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D1_CheckOnPatient_P1
   m_EditorClassIdentifier: 
   missionName: D1_CheckOnPatient_P1
-  description: 'Check On Patient 1
+  description: 'Check On Patients
 
 '
   screenFlashText: 

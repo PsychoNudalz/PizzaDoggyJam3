@@ -2052,6 +2052,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 725817171572873602, guid: 902a29f51d20e0249817fdcedf6f9ab6,
+        type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 725817171572873602, guid: 902a29f51d20e0249817fdcedf6f9ab6,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: bf5f54ba2f08655478daf2cbcbe1ca12,
+        type: 2}
+    - target: {fileID: 725817171572873602, guid: 902a29f51d20e0249817fdcedf6f9ab6,
+        type: 3}
+      propertyPath: dialogueList.Array.data[1].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 50a59e3d3225bc54ca63d2e57019f262,
+        type: 2}
+    - target: {fileID: 725817171572873602, guid: 902a29f51d20e0249817fdcedf6f9ab6,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].isLoadNextDialogue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2620270384547560610, guid: 902a29f51d20e0249817fdcedf6f9ab6,
         type: 3}
       propertyPath: m_IsActive

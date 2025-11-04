@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: Collect Sample
   m_EditorClassIdentifier: 
-  dialogue: I Have the Sample
+  dialogue: Sample Collected
   dialogueDuration: 0.3
   endDuration: 1

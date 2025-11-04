@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: PatientTreated
   m_EditorClassIdentifier: 
-  dialogue: I've injected the vaccine.
-  dialogueDuration: 2
+  dialogue: Injected vaccine
+  dialogueDuration: 0.5
   endDuration: 1

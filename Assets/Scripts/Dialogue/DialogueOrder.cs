@@ -8,6 +8,7 @@ public class DialogueOrder
     [SerializeField] public DialogueObject dialogue;
 
     [SerializeField] public bool isIncreaseIndex;
+    [SerializeField] public bool isLoadNextDialogue;
     [SerializeField] public bool isJumpIndex;
     [SerializeField] public int jumpToIndex = -1;
 
@@ -27,6 +28,7 @@ public class DialogueOrder
     public DialogueOrder()
     {
         this.dialogue = null;
+        this.isLoadNextDialogue = false;
         this.isIncreaseIndex = false;
         this.jumpToIndex = -1;
         this.loadMissionIndex = -1;

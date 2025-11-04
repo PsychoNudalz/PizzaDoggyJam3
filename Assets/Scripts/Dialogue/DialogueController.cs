@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,20 @@ public class DialogueController : MonoBehaviour
     [SerializeField] string speakerName;
     [SerializeField] List<DialogueOrder> dialogueList;
     [SerializeField] int dialogueIndex;
+    [SerializeField]
+    bool playOnStart = false;
 
     [SerializeField] List<SoundAbstract> soundList;
-    [SerializeField]  int soundIndex = 0;
+    [SerializeField] int soundIndex = 0;
 
+
+    void Start()
+    {
+        if (playOnStart)
+        {
+            LoadDialogue();
+        }
+    }
     public void LoadDialogue()
     {
         if (dialogueList.Count > 0)
@@ -21,6 +32,7 @@ public class DialogueController : MonoBehaviour
             {
                 IncreaseIndex();
             }
+
 
             if (dialogueOrder.isJumpIndex)
             {
@@ -34,6 +46,12 @@ public class DialogueController : MonoBehaviour
 
 
             dialogueOrder.ProcessMissions();
+
+            if (dialogueOrder.isLoadNextDialogue)
+            {
+                IncreaseIndex();
+                LoadDialogue();
+            }
 
         }
     }
