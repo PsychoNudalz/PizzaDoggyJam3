@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -50,6 +51,11 @@ public class UIController : MonoBehaviour
     [SerializeField] Transform inspectingRoot;
     Dictionary<ItemEnum, UIInspectItem> inspectItems;
 
+    [Space(10)]
+    [Header("Hallucination")]
+    [SerializeField] Transform hallucinationRoot;
+    [SerializeField] RawImage hallucinationImage;
+
     private void Awake()
     {
         if (Instance)
@@ -73,6 +79,7 @@ public class UIController : MonoBehaviour
 
         vaccineRoot?.gameObject.SetActive(false);
         inspectingRoot?.gameObject.SetActive(false);
+        hallucinationRoot?.gameObject.SetActive(false);
 
     }
 
@@ -297,4 +304,22 @@ public class UIController : MonoBehaviour
     {
         Instance.OnInspectOff();
     }
+
+    // Hallucination
+    public static void SetHallucination(float strength = 0)
+    {
+        if (strength > 0)
+        {
+            Instance.hallucinationRoot.gameObject.SetActive(true);
+            var color = Instance.hallucinationImage.color;
+            color.a = strength;
+            Instance.hallucinationImage.color = color;
+        }
+        else
+        {
+            Instance.hallucinationRoot.gameObject.SetActive(false);
+        }
+
+    }
+
 }

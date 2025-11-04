@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     PlayerInput playerInput;
     [SerializeField]
-    FirstPersonController  firstPersonController;
+    FirstPersonController firstPersonController;
     [SerializeField]
     InteractSystem interactSystem;
     bool inputLock = false;
@@ -81,6 +81,31 @@ public class PlayerController : MonoBehaviour
     public void OnInspectOff()
     {
         UIController.OnInspectOff_Static();
+    }
+
+    public static void TeleportPlayer_Static(Vector3 position)
+    {
+        Instance?.TeleportPlayer(position);
+    }
+
+    public void TeleportPlayer(Vector3 position)
+    {
+        if (firstPersonController.enabled)
+        {
+            StartCoroutine(TeleportRoutine(position));
+        }
+    }
+
+    IEnumerator TeleportRoutine(Vector3 position)
+    {
+        firstPersonController.enabled = false;
+        Blink();
+
+        yield return new WaitForFixedUpdate();
+        transform.position = position;
+
+        yield return new WaitForFixedUpdate();
+        firstPersonController.enabled = true;
     }
 
 
