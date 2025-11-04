@@ -47,6 +47,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3946628744653760923}
   - component: {fileID: 8910762717816230455}
+  - component: {fileID: 1406163894309188631}
   m_Layer: 0
   m_Name: UI Screen
   m_TagString: Untagged
@@ -109,6 +110,19 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &1406163894309188631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225396391221769783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f37fc6855845a4283d747727cf3c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoName: Upper_SA
 --- !u!1 &1625364827679126984
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3474663518014499477}
   - component: {fileID: 328096341375455374}
+  - component: {fileID: 526963675999391541}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -181,3 +196,16 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &526963675999391541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625364827679126984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f37fc6855845a4283d747727cf3c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoName: Upper_SA
