@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D1_P3_ITrustU
   m_EditorClassIdentifier: 
-  dialogue: :3 everything will be fine, i trust you doctor
+  dialogue: "The disease is scary. But I\u2019m not scared, i trust you doctor."
   dialogueDuration: 1
   endDuration: 2

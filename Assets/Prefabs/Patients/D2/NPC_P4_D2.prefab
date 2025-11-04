@@ -379,6 +379,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
         type: 3}
+      propertyPath: singleDialogueOrder.dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 448f0a9a03c35b140a71a6d2fee2203c,
+        type: 2}
+    - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
+        type: 3}
       propertyPath: singleDialogueOrder.completeMission
       value: 
       objectReference: {fileID: 11400000, guid: 2dce9de37cfd27345bbb3169716812d9,
@@ -511,7 +517,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueList.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: ef7243cd84603594682439636c7b5866,
+      objectReference: {fileID: 11400000, guid: 38e1e6c6cc660f247a87bb32e4a260a6,
         type: 2}
     - target: {fileID: 2001674017818552368, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}

@@ -92,7 +92,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueList.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 541106443169866498fee312fcbd5831,
+      objectReference: {fileID: 11400000, guid: efb37b2f860ae314c8c978d4fa0231d1,
         type: 2}
     - target: {fileID: 2001674017818552368, guid: a73b8374fdcc5b941817c5d6a48da40a,
         type: 3}
@@ -264,6 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
         type: 3}
+      propertyPath: singleDialogueOrder.dialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
+        type: 3}
       propertyPath: singleDialogueOrder.completeMission
       value: 
       objectReference: {fileID: 11400000, guid: a2ddc75e5a672bf4f8870661103fae87,
@@ -339,6 +344,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a2ddc75e5a672bf4f8870661103fae87,
         type: 2}
+    - target: {fileID: 1374008569299287721, guid: 76defe9fbf87b6b449703e27733f020e,
+        type: 3}
+      propertyPath: singleDialogueOrder.dialogue
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1374008569299287721, guid: 76defe9fbf87b6b449703e27733f020e,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.size

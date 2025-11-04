@@ -70,6 +70,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
         type: 3}
+      propertyPath: singleDialogueOrder.dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: c954a8c09acb1ef40ad29a92d62103ae,
+        type: 2}
+    - target: {fileID: 5313159949530150302, guid: 76426870f25d92c4d99afc6a07e63cdb,
+        type: 3}
       propertyPath: singleDialogueOrder.completeMission
       value: 
       objectReference: {fileID: 11400000, guid: 363b6f5052d329f45b2bf2db0900ac53,
@@ -149,6 +155,12 @@ PrefabInstance:
       propertyPath: vaccineMissionObject
       value: 
       objectReference: {fileID: 11400000, guid: 363b6f5052d329f45b2bf2db0900ac53,
+        type: 2}
+    - target: {fileID: 1374008569299287721, guid: 76defe9fbf87b6b449703e27733f020e,
+        type: 3}
+      propertyPath: singleDialogueOrder.dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 44f6654b25d9d824581fc8d2939e2b01,
         type: 2}
     - target: {fileID: 1374008569299287721, guid: 76defe9fbf87b6b449703e27733f020e,
         type: 3}
@@ -354,7 +366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueList.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 33ab8338836ba7449af2b0b040b9103d,
+      objectReference: {fileID: 11400000, guid: b1ad782976e496e49b2a30c3043f661b,
         type: 2}
     - target: {fileID: 2001674017818552368, guid: 90adc341803055148869ae293a93aba1,
         type: 3}

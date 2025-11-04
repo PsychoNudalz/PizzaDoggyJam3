@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D1_P4_Killer
   m_EditorClassIdentifier: 
-  dialogue: Syringe! you a killer! The TV is so loud, so annoying!
+  dialogue: THE TV IS TOO LOUD! DO SOMETHING!
   dialogueDuration: 1
   endDuration: 2

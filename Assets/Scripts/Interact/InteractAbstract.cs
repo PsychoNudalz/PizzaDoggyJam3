@@ -40,7 +40,7 @@ public abstract class InteractAbstract : MonoBehaviour
 
     public bool CanInteract() => canInteract && !isInteracting;
 
-    public  Vector3 PopUpPosition()
+    public Vector3 PopUpPosition()
     {
         return popUpTransform.position + popUpOffset;
     }
@@ -109,10 +109,8 @@ public abstract class InteractAbstract : MonoBehaviour
             }
         }
 
-        if (singleDialogueOrder.dialogue)
-        {
-            LoadSingleDialogue();
-        }
+
+        LoadSingleDialogue();
         OnFocus_Exit();
     }
 
@@ -161,7 +159,10 @@ public abstract class InteractAbstract : MonoBehaviour
 
     protected virtual void LoadSingleDialogue()
     {
-        UIController.LoadDialogue(new DialogueStruct("", singleDialogueOrder.dialogue));
+        if (singleDialogueOrder.dialogue)
+        {
+            UIController.LoadDialogue(new DialogueStruct("", singleDialogueOrder.dialogue));
+        }
 
         singleDialogueOrder.ProcessMissions();
 

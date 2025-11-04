@@ -22,8 +22,13 @@ public class DialogueController : MonoBehaviour
             LoadDialogue();
         }
     }
-    public void LoadDialogue()
+    public void LoadDialogue(int  index = -1)
+
     {
+        if (index > -1)
+        {
+            SetIndex(index);
+        }
         if (dialogueList.Count > 0)
         {
             DialogueOrder dialogueOrder = dialogueList[dialogueIndex];

@@ -76,14 +76,14 @@ MonoBehaviour:
   OnInteractEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7508248499814010129}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
         m_MethodName: LoadDialogue
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   singleDialogueOrder:
     dialogue: {fileID: 0}
     isIncreaseIndex: 0
+    isLoadNextDialogue: 0
     isJumpIndex: 0
     jumpToIndex: -1
     isLoadMissionIndex: 0
@@ -132,6 +133,7 @@ MonoBehaviour:
   dialogueList:
   - dialogue: {fileID: 11400000, guid: f4f649d9955fb0c41b6247b49e069a55, type: 2}
     isIncreaseIndex: 0
+    isLoadNextDialogue: 0
     isJumpIndex: 0
     jumpToIndex: 0
     isLoadMissionIndex: 0
@@ -141,6 +143,7 @@ MonoBehaviour:
     completeMissionIndex: 0
     completeMission: {fileID: 0}
   dialogueIndex: 0
+  playOnStart: 0
   soundList: []
   soundIndex: 0
 --- !u!1 &6789744766059516968

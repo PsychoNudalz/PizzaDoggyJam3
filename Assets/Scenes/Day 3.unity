@@ -2082,6 +2082,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Radio
       objectReference: {fileID: 0}
+    - target: {fileID: 3156345826046508269, guid: 02d5cc054bc166b419fb26a7461cf7c5,
+        type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156345826046508269, guid: 02d5cc054bc166b419fb26a7461cf7c5,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7054e8bb54a0fd946b317d461043d3ea,
+        type: 2}
+    - target: {fileID: 3156345826046508269, guid: 02d5cc054bc166b419fb26a7461cf7c5,
+        type: 3}
+      propertyPath: dialogueList.Array.data[1].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: cf391d95f38b36c4eaa2be2780076e4c,
+        type: 2}
+    - target: {fileID: 3156345826046508269, guid: 02d5cc054bc166b419fb26a7461cf7c5,
+        type: 3}
+      propertyPath: dialogueList.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: abd9bb2c12d54ad4cb1aa68ba70353da,
+        type: 2}
+    - target: {fileID: 3156345826046508269, guid: 02d5cc054bc166b419fb26a7461cf7c5,
+        type: 3}
+      propertyPath: dialogueList.Array.data[0].isLoadNextDialogue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6828837371999731580, guid: 02d5cc054bc166b419fb26a7461cf7c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6983,7 +7011,7 @@ PrefabInstance:
     - target: {fileID: 1427765524399480449, guid: a37337f217a333d4994f3ae3ae41dd5a,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1427765524399480449, guid: a37337f217a333d4994f3ae3ae41dd5a,
         type: 3}
@@ -7004,6 +7032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DialogueController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427765524399480449, guid: a37337f217a333d4994f3ae3ae41dd5a,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1427765524399480449, guid: a37337f217a333d4994f3ae3ae41dd5a,
         type: 3}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
-  m_Name: D1_P4_Don'tTouch
+  m_Name: D2_P2 1
   m_EditorClassIdentifier: 
-  dialogue: YOU MURDERER!
+  dialogue: ARGHHHHHHHHHHHHHHHHHHH
   dialogueDuration: 0.5
   endDuration: 1

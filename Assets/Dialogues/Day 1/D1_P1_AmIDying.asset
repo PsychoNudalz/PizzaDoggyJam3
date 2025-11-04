@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D1_P1_AmIDying
   m_EditorClassIdentifier: 
-  dialogue: "You\u2019re here again. For the blood sample, right? My skin\u2019s
-    folding in on itself. Am I dying? I will die. I know it"
+  dialogue: 'Hi Doctor. Are you here for the blood sample again? After take sample:
+    Am i well? Am i dying? i will die right?'
   dialogueDuration: 4
   endDuration: 3

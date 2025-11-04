@@ -85,14 +85,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
         type: 3}
+      propertyPath: singleDialogueOrder.completeMissionIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
+        type: 3}
+      propertyPath: singleDialogueOrder.isCompleteMissionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
+        type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8892087136358129119}
     - target: {fileID: 8291107801212838296, guid: 1b782dd0ec3d1f4409efd1913492716a,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Target

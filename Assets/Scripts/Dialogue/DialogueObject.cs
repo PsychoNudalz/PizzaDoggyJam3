@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Dialogue", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "Dialogue", order = 1)]
 public class DialogueObject : ScriptableObject
 {
     [TextArea] [SerializeField] string dialogue = "";
