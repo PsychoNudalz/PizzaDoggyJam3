@@ -199,6 +199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6469222980688024981, guid: 621e43856acc7ff42928099a585f0729,
         type: 3}
+      propertyPath: canInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469222980688024981, guid: 621e43856acc7ff42928099a585f0729,
+        type: 3}
       propertyPath: animationName
       value: Sink_Day3
       objectReference: {fileID: 0}

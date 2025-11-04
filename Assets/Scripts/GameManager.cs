@@ -43,19 +43,35 @@ public class GameManager : MonoBehaviour
     public virtual void LoadNextScene()
     {
         if (loadingNextScene) return;
+
+
         loadingNextScene = true;
         onEndEvent.Invoke();
+
+
         if (nextSceneName == "")
         {
             Debug.LogError("Next scene name is empty");
             return;
         }
+
+
         StartCoroutine(DelayLoadScene());
     }
     IEnumerator DelayLoadScene()
     {
+
         yield return new WaitForSeconds(delay);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+        PlayerController.Blink_Static(1f);
+        yield return new WaitForSeconds(1f);
+        if (nextSceneName.Equals("EndGame"))
+        {
+            EndGame();
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+        }
     }
 
     public static void ResetScene()
@@ -75,4 +91,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public static void EndGame()
+    {
+        Application.Quit();
+    }
 }
