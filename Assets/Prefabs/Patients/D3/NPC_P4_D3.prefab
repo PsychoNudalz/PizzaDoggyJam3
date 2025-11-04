@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_P4_D3
       objectReference: {fileID: 0}
+    - target: {fileID: 3831628206306872310, guid: ce342b1c362e29c459b9eb77089f42ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7041860798326005351, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
       propertyPath: m_IsActive
