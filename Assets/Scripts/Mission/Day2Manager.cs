@@ -23,6 +23,11 @@ public class Day2Manager : GameManager
     List<int> patientSaved =  new List<int>();
 
     [SerializeField]
+    DialogueObject dialogueObject;
+    [SerializeField]
+    SoundAbstract screamSound;
+
+    [SerializeField]
     [Tooltip("After patients 1,2,3 are treated, open patient 4 door")]
     UnityEvent onFinishTreating;
     [SerializeField]
@@ -95,6 +100,13 @@ public class Day2Manager : GameManager
         }
 
         base.LoadNextScene();
+    }
+
+    public void Patient2Scream()
+    {
+        Debug.Log("Patient 2 scream");
+        UIController.LoadDialogue(new DialogueStruct("Patient 2", dialogueObject));
+        screamSound.Play();
     }
 
 }
