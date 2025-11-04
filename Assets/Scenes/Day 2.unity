@@ -566,36 +566,41 @@ PrefabInstance:
     - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
-        type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
-        type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1929555138}
-    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
-        type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
         type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1929555138}
+    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: TriggerEndOfDay
       objectReference: {fileID: 0}
     - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
         type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MissionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
         type: 3}
-      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133050001163810230, guid: cfaff291177c614449595a32b1e81f68,
+        type: 3}
+      propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7411803389675821205, guid: cfaff291177c614449595a32b1e81f68,

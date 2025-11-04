@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  volume: 0.75
+  volume: 1.5
   volumeVariance: 0.1
   pitch: 1
   pitchVariance: 0.1
@@ -486,7 +486,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 5337050383636802506}
+      objectReference: {fileID: 150210456648092398}
     - target: {fileID: 467343170954308986, guid: ce342b1c362e29c459b9eb77089f42ba,
         type: 3}
       propertyPath: OnInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState

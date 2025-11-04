@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D3_Radio_DoctorWanted
   m_EditorClassIdentifier: 
-  dialogue: "Authorities are now investigating Dr. Horrace, head of the quarantine
-    ward, after internal logs revealed he treated patients without clearance. Some
-    believe he\u2019s not containing the outbreak.  HE'S ACCELERATING IT!"
+  dialogue: "Authorities are now investigating Dr. Horace.  He treated patients without
+    clearance. Some believe he\u2019s not containing the outbreak.  HE'S ACCELERATING
+    IT."
   dialogueDuration: 5
   endDuration: 10

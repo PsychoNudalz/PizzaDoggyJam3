@@ -27,6 +27,9 @@ public class InteractSink : InteractObject
     Material m_mirrorReflected;
     [SerializeField]
     Camera mirrorCamera;
+    [SerializeField]
+    [Range(0f,1f)]
+    float hallucinateAmount;
 
     void Start()
     {
@@ -36,6 +39,14 @@ public class InteractSink : InteractObject
             mirrorRenderer.material = (m_mirrorOriginal);
         }
         mirrorCamera?.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (hallucinateAmount > 0.01f)
+        {
+            UIController.SetHallucination(hallucinateAmount);
+        }
     }
     protected override void InteractLogic()
     {

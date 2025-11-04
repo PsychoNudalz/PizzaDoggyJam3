@@ -117,5 +117,6 @@ public class Patient4ChaseController : MonoBehaviour
         patient4Animator.enabled = false;
         MissionManager.CompleteMission_Object(chaseMission);
         MissionManager.CompleteMission_Object(findSyringeMission);
+        PlayerController.Blink_Static();
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb382662246900248aadd250df6f8968, type: 3}
   m_Name: D2_P3_Treat
   m_EditorClassIdentifier: 
-  dialogue: What? You got the vaccine? Thank you. Thank you so much!
-  dialogueDuration: 2
+  dialogue: The vaccine! Ouch it hurts, but helps right?
+  dialogueDuration: 1
   endDuration: 2

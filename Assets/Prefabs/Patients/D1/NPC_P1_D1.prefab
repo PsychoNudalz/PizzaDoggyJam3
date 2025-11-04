@@ -63,7 +63,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueList.Array.data[1].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 8211c4d341bbdf046b0a2ddcd1eb1a09,
+      objectReference: {fileID: 11400000, guid: e23e0d70eba067a408e9e1a285e81eef,
         type: 2}
     - target: {fileID: 2001674017818552368, guid: a73b8374fdcc5b941817c5d6a48da40a,
         type: 3}
