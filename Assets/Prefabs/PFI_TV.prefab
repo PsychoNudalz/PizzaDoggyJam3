@@ -206,6 +206,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5533221023489326141}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   singleDialogueOrder:
     dialogue: {fileID: 0}
     isIncreaseIndex: 0
@@ -373,6 +385,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2919bdabad70f3444b562a760d775396, type: 3}
+--- !u!1 &5533221023489326141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 712576145572212244, guid: 2919bdabad70f3444b562a760d775396,
+    type: 3}
+  m_PrefabInstance: {fileID: 4983909250703184425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9055580656574944194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4071682521278841323, guid: 2919bdabad70f3444b562a760d775396,

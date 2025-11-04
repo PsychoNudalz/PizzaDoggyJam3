@@ -550,7 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   interactCooldown: 1
-  oneOffInteract: 0
+  oneOffInteract: 1
   isAutoTrigger: 0
   OnInteractEvents:
     m_PersistentCalls:

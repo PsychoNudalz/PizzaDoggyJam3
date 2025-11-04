@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: speakerName
+      value: Patient 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2382569144360698896, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

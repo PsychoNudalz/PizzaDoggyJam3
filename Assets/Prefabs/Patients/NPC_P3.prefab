@@ -18,6 +18,11 @@ PrefabInstance:
       propertyPath: pitchVariance
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: speakerName
+      value: Patient 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2382569144360698896, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -37,7 +42,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c3fed16d06b0ac5458efe3c0a6429e3a,
+      objectReference: {fileID: 21300000, guid: 922fe1321cf77b641890db440ad30bb7,
         type: 3}
     - target: {fileID: 3652297858400555358, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: :3 everything will be fine, i trust you doctor
   dialogueDuration: 1
-  endDuration: 1
+  endDuration: 2

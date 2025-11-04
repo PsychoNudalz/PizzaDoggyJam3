@@ -88,6 +88,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2558723289684054983}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   singleDialogueOrder:
     dialogue: {fileID: 0}
     isIncreaseIndex: 0
@@ -282,6 +294,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1576939e8017c0408fb80c065eefbe9, type: 3}
+--- !u!198 &2558723289684054983 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1230422659174795450, guid: e1576939e8017c0408fb80c065eefbe9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3643763554837306237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7792701344814240684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6824082840633411793, guid: e1576939e8017c0408fb80c065eefbe9,

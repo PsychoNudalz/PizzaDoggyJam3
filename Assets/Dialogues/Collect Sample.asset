@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Collect Sample
   m_EditorClassIdentifier: 
   dialogue: I Have the Sample
-  dialogueDuration: 1
+  dialogueDuration: 0.3
   endDuration: 1

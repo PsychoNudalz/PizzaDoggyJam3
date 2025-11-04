@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 2001674017818552368, guid: 90adc341803055148869ae293a93aba1,
         type: 3}
       propertyPath: dialogueList.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2001674017818552368, guid: 90adc341803055148869ae293a93aba1,
         type: 3}

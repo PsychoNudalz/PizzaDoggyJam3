@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 596794437148516487, guid: 7b32e7f56a0f41945af873576cdf8cea,
+        type: 3}
+      propertyPath: speakerName
+      value: Patient 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3652297858400555358, guid: 7b32e7f56a0f41945af873576cdf8cea,
         type: 3}
       propertyPath: m_Sprite

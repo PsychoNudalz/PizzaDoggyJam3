@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: D1_P2_Uge
   m_EditorClassIdentifier: 
   dialogue: huhh, urghh, urgeee, oue, gah, huh...ho, ho?
-  dialogueDuration: 6
+  dialogueDuration: 4
   endDuration: 4
