@@ -90,9 +90,9 @@ MonoBehaviour:
   root_Treated: {fileID: 5246201541160660050}
   patientSprite: {fileID: 4200300560724405137}
   treatedSprites:
-  - {fileID: 21300000, guid: 68e4df329bc61a849a057f57636f0fb4, type: 3}
-  - {fileID: 21300000, guid: 922fe1321cf77b641890db440ad30bb7, type: 3}
-  - {fileID: 21300000, guid: 10ef58686f8a8aa4b9e495f5ba6770ab, type: 3}
+  - {fileID: 21300000, guid: a3bb888e8a2c26a48988ed4d99fac8cd, type: 3}
+  - {fileID: 21300000, guid: 7cf9f2977424fdf42aa83ee9fe8cdaa8, type: 3}
+  - {fileID: 21300000, guid: 4aeef78bf72d3c446bc3a2add963de51, type: 3}
 --- !u!1 &5246201541160660050
 GameObject:
   m_ObjectHideFlags: 0

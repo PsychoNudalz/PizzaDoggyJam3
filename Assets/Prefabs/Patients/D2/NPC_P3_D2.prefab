@@ -332,6 +332,12 @@ PrefabInstance:
       propertyPath: dialogueList.Array.data[0].isCompleteMissionIndex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2387175001917495785, guid: 90adc341803055148869ae293a93aba1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa909cc0ba9f13248adf3838e12a5e54,
+        type: 3}
     - target: {fileID: 3435352627966156730, guid: 90adc341803055148869ae293a93aba1,
         type: 3}
       propertyPath: m_Name
