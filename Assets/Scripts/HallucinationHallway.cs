@@ -65,7 +65,5 @@ public class HallucinationHallway : MonoBehaviour
         UIController.SetHallucination(0);
 
         // radioDialogue?.LoadDialogue();
-
-
     }
 }

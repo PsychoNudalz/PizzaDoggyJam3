@@ -4697,7 +4697,7 @@ MonoBehaviour:
   onStartEvent:
     m_PersistentCalls:
       m_Calls: []
-  nextSceneName: EndGame
+  nextSceneName: The End
   onEndEvent:
     m_PersistentCalls:
       m_Calls: []

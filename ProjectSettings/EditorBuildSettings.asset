@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day 3.unity
     guid: cc8b7481e758ea24aa76eef188164ffd
+  - enabled: 1
+    path: Assets/Scenes/The End.unity
+    guid: d72d6e00856685246b8bd7e164539239
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
