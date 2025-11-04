@@ -16,6 +16,8 @@ public class HallucinationHallway : MonoBehaviour
     AnimationCurve curve;
     [SerializeField]
     Transform toiletTP;
+    [SerializeField]
+    DialogueController radioDialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +63,9 @@ public class HallucinationHallway : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         UIController.SetHallucination(0);
+
+        // radioDialogue?.LoadDialogue();
+
 
     }
 }
