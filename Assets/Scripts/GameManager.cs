@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected GameObject player;
     protected string TreatedPPrefName = "Treated_P";
 
+    [SerializeField] bool lockMouse = true;
+
 
     public static GameManager Instance;
 
@@ -28,6 +30,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (lockMouse)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+        }
+
         PlayerController findObjectOfType = FindObjectOfType<PlayerController>();
         if (findObjectOfType)
         {
