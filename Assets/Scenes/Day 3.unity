@@ -18992,6 +18992,7 @@ MonoBehaviour:
       m_Calls: []
   delay: 0
   player: {fileID: 0}
+  lockMouse: 1
   patientKits:
   - {fileID: 2054579688}
   - {fileID: 1910357911}
