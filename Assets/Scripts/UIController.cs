@@ -54,7 +54,7 @@ public class UIController : MonoBehaviour
     [Space(10)]
     [Header("Hallucination")]
     [SerializeField] Transform hallucinationRoot;
-    [SerializeField] RawImage hallucinationImage;
+    [SerializeField] Image hallucinationImage;
 
     private void Awake()
     {

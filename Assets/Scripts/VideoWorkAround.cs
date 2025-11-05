@@ -7,10 +7,10 @@ using UnityEngine.Video;
 public class VideoWorkAround : MonoBehaviour
 {
     [SerializeField]
-    string videoName = "Upper_SA";
+    string videoName = "Upper";
     VideoPlayer videoPlayer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
 
